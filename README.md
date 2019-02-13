@@ -4,6 +4,11 @@ See the SOSP'17 paper [DeepXplore: Automated Whitebox Testing of Deep Learning S
 ### Python
 The code should be run using python 2.7.12, Tensorflow 1.3.0, Keras 2.0.8, PIL, h5py, and opencv-python
 
+jteoh edit: If using conda, you can run the following to create an environment that installs everything but Mimicus (described below)
+```bash
+conda create -c conda-forge -n deepxplore python=2.7.12 tensorflow=1.3.0 keras=2.0.8 PIL h5py opencv
+```
+
 ### Tensorflow
 ```bash
 sudo pip install tensorflow
