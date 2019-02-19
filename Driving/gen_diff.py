@@ -10,6 +10,7 @@ from scipy.misc import imsave
 
 from driving_models import *
 from utils import *
+GEN_INPUTS_DIR='../generated_inputs/Driving/'
 
 # read the parameter
 # argument parsing
@@ -74,7 +75,7 @@ for _ in xrange(args.seeds):
         gen_img_deprocessed = draw_arrow(deprocess_image(gen_img), angle1, angle2, angle3)
 
         # save the result to disk
-        imsave('./generated_inputs/' + 'already_differ_' + str(angle1) + '_' + str(angle2) + '_' + str(angle3) + '.png',
+        imsave(GEN_INPUTS_DIR + 'already_differ_' + str(angle1) + '_' + str(angle2) + '_' + str(angle3) + '.png',
                gen_img_deprocessed)
         continue
 
@@ -146,8 +147,8 @@ for _ in xrange(args.seeds):
             orig_img_deprocessed = draw_arrow(deprocess_image(orig_img), orig_angle1, orig_angle2, orig_angle3)
 
             # save the result to disk
-            imsave('./generated_inputs/' + args.transformation + '_' + str(angle1) + '_' + str(angle2) + '_' + str(
+            imsave(GEN_INPUTS_DIR + args.transformation + '_' + str(angle1) + '_' + str(angle2) + '_' + str(
                 angle3) + '.png', gen_img_deprocessed)
-            imsave('./generated_inputs/' + args.transformation + '_' + str(angle1) + '_' + str(angle2) + '_' + str(
+            imsave(GEN_INPUTS_DIR + args.transformation + '_' + str(angle1) + '_' + str(angle2) + '_' + str(
                 angle3) + '_orig.png', orig_img_deprocessed)
             break
