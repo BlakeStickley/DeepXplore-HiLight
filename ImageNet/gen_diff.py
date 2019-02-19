@@ -15,6 +15,8 @@ from scipy.misc import imsave
 from configs import bcolors
 from utils import *
 
+GEN_INPUTS_DIR='../generated_inputs/ImageNet/'
+
 # read the parameter
 # argument parsing
 parser = argparse.ArgumentParser(
@@ -81,7 +83,7 @@ for _ in xrange(args.seeds):
         gen_img_deprocessed = deprocess_image(gen_img)
 
         # save the result to disk
-        imsave('./generated_inputs/' + 'already_differ_' + decode_label(pred1) + '_' + decode_label(
+        imsave(GEN_INPUTS_DIR + 'already_differ_' + decode_label(pred1) + '_' + decode_label(
             pred2) + '_' + decode_label(pred3) + '.png',
                gen_img_deprocessed)
         continue
@@ -155,8 +157,8 @@ for _ in xrange(args.seeds):
             orig_img_deprocessed = deprocess_image(orig_img)
 
             # save the result to disk
-            imsave('./generated_inputs/' + args.transformation + '_' + decode_label(pred1) + '_' + decode_label(
+            imsave(GEN_INPUTS_DIR + args.transformation + '_' + decode_label(pred1) + '_' + decode_label(
                 pred2) + '_' + decode_label(pred3) + '.png', gen_img_deprocessed)
-            imsave('./generated_inputs/' + args.transformation + '_' + decode_label(pred1) + '_' + decode_label(
+            imsave(GEN_INPUTS_DIR + args.transformation + '_' + decode_label(pred1) + '_' + decode_label(
                 pred2) + '_' + decode_label(pred3) + '_orig.png', orig_img_deprocessed)
             break
