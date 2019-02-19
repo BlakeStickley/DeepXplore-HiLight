@@ -16,6 +16,8 @@ from Model3 import Model3
 from configs import bcolors
 from utils import *
 
+GEN_INPUTS_DIR='../generated_inputs/MNIST/'
+
 # read the parameter
 # argument parsing
 parser = argparse.ArgumentParser(description='Main function for difference-inducing input generation in MNIST dataset')
@@ -86,7 +88,7 @@ for _ in xrange(args.seeds):
         gen_img_deprocessed = deprocess_image(gen_img)
 
         # save the result to disk
-        imsave('./generated_inputs/' + 'already_differ_' + str(label1) + '_' + str(
+        imsave(GEN_INPUTS_DIR + 'already_differ_' + str(label1) + '_' + str(
             label2) + '_' + str(label3) + '.png', gen_img_deprocessed)
         continue
 
@@ -160,10 +162,10 @@ for _ in xrange(args.seeds):
             orig_img_deprocessed = deprocess_image(orig_img)
 
             # save the result to disk
-            imsave('./generated_inputs/' + args.transformation + '_' + str(predictions1) + '_' + str(
+            imsave(GEN_INPUTS_DIR + args.transformation + '_' + str(predictions1) + '_' + str(
                 predictions2) + '_' + str(predictions3) + '.png',
                    gen_img_deprocessed)
-            imsave('./generated_inputs/' + args.transformation + '_' + str(predictions1) + '_' + str(
+            imsave(GEN_INPUTS_DIR + args.transformation + '_' + str(predictions1) + '_' + str(
                 predictions2) + '_' + str(predictions3) + '_orig.png',
                    orig_img_deprocessed)
             break
