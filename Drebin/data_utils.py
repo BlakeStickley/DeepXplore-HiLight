@@ -93,7 +93,7 @@ def testing_data(train_test_apps, feats, malwares, path):
     return xs, ys
 
 
-def load_test_data(batch_size=64, path='./dataset/'):
+def load_test_data(batch_size=64, path='./test/'):
     malwares = []
     with open(path + 'sha256_family.csv', 'r') as f:
         for i, line in enumerate(f):
@@ -115,7 +115,7 @@ def load_test_data(batch_size=64, path='./dataset/'):
     return feats, xs
 
 
-def load_data(batch_size=64, load=True, path='./dataset/'):
+def load_data(batch_size=64, load=True, path='./test/'):
     malwares = []
     with open(path + 'sha256_family.csv', 'r') as f:
         for i, line in enumerate(f):

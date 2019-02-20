@@ -26,6 +26,8 @@ args = parser.parse_args()
 feats, _, _, _, _ = load_data(64, False)
 num_features = len(feats)
 
+output_file = "../generated_inputs/Drebin/drebin.txt"
+
 # define input tensor as a placeholder
 input_tensor = Input(shape=(num_features,))
 
@@ -73,7 +75,7 @@ for _ in xrange(args.seeds):
         print(bcolors.OKGREEN + 'averaged covered neurons %.3f' % averaged_nc + bcolors.ENDC)
 
         # save the result to disk
-        with open('generated_inputs', 'a') as f:
+        with open(output_file, 'a') as f:
             f.write(
                 'Already causes differences: name: {}, label1:{}, label2: {}, label3: {}\n'.format(app_path, label1,
                                                                                                    label2, label3))
@@ -137,7 +139,7 @@ for _ in xrange(args.seeds):
             print(bcolors.OKGREEN + 'averaged covered neurons %.3f' % averaged_nc + bcolors.ENDC)
 
             # save the result to disk
-            with open('generated_inputs', 'a') as f:
+            with open(output_file, 'a') as f:
                 f.write(
                     'name: {}, label1:{}, label2: {}, label3: {}\n'.format(app_path, label1, label2, label3))
                 f.write('changed features: {}\n\n'.format(features_changed(gen_app, orig_app, feats)))

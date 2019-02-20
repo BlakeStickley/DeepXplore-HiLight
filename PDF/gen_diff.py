@@ -33,6 +33,8 @@ num_features = X_test.shape[1]
 feat_names = FeatureDescriptor.get_feature_names()
 incre_idx, incre_decre_idx = init_feature_constraints(feat_names)
 
+output_file = "../generated_inputs/PDF/pdf.txt"
+
 # define input tensor as a placeholder
 input_tensor = Input(shape=(num_features,))
 
@@ -73,7 +75,7 @@ for _ in xrange(args.seeds):
         print(bcolors.OKGREEN + 'averaged covered neurons %.3f' % averaged_nc + bcolors.ENDC)
 
         # save the result to disk
-        with open('generated_inputs', 'a') as f:
+        with open(output_file, 'a') as f:
             f.write(
                 'Already causes differences: name: {}, label1:{}, label2: {}, label3: {}\n'.format(names[idx], label1,
                                                                                                    label2, label3))
@@ -139,7 +141,7 @@ for _ in xrange(args.seeds):
             print(bcolors.OKGREEN + 'averaged covered neurons %.3f' % averaged_nc + bcolors.ENDC)
 
             # save the result to disk
-            with open('generated_inputs', 'a') as f:
+            with open(output_file, 'a') as f:
                 f.write(
                     'name: {}, label1:{}, label2: {}, label3: {}\n'.format(names[idx], label1, label2, label3))
                 f.write('changed features: {}\n\n'.format(features_changed(gen_pdf, orig_pdf, feat_names)))
