@@ -94,6 +94,7 @@ for _ in xrange(args.seeds):
 
     # if all label agrees
     orig_label = label1
+
     layer_name1, index1 = neuron_to_cover(model_layer_dict1)
     layer_name2, index2 = neuron_to_cover(model_layer_dict2)
     layer_name3, index3 = neuron_to_cover(model_layer_dict3)
@@ -111,6 +112,8 @@ for _ in xrange(args.seeds):
         loss1 = K.mean(model1.get_layer('before_softmax').output[..., orig_label])
         loss2 = K.mean(model2.get_layer('before_softmax').output[..., orig_label])
         loss3 = -args.weight_diff * K.mean(model3.get_layer('before_softmax').output[..., orig_label])
+
+    # Need to remove mean and use unravel on index 1 (see utils.py)
     loss1_neuron = K.mean(model1.get_layer(layer_name1).output[..., index1])
     loss2_neuron = K.mean(model2.get_layer(layer_name2).output[..., index2])
     loss3_neuron = K.mean(model3.get_layer(layer_name3).output[..., index3])
