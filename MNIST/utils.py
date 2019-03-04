@@ -57,7 +57,7 @@ def init_dict(model, model_layer_dict):
     for layer in model.layers:
         if 'flatten' in layer.name or 'input' in layer.name:
             continue
-        for index in range(layer.output_shape[-1]):
+        for index in range(layer.output_shape[-1]): # product of dims
             model_layer_dict[(layer.name, index)] = False
 
 
@@ -86,10 +86,16 @@ def update_coverage(input_data, model, model_layer_dict, threshold=0):
 
     for i, intermediate_layer_output in enumerate(intermediate_layer_outputs):
         scaled = scale(intermediate_layer_output[0])
-        for num_neuron in xrange(scaled.shape[-1]):
-            if np.mean(scaled[..., num_neuron]) > threshold and not model_layer_dict[(layer_names[i], num_neuron)]:
+        # print(str(layer_names[i]) + " " + str(scaled.shape))
+        # print(type(scaled.shape))
+        # print("SIZE : " + str(num_neurons(scaled)))
+        for num_neuron in xrange(scaled.shape[-1]): # index through every single (indiv) neuron
+            # Brett suggestion: flatten below lookup (scaled[...]
+            if np.mean(scaled[..., num_neuron]) > threshold and not model_layer_dict[(layer_names[i], num_neuron)]: # get rid of mean
                 model_layer_dict[(layer_names[i], num_neuron)] = True
 
+def num_neurons(layer):
+    return reduce(lambda x,y: x*y, layer.shape)
 
 def full_coverage(model_layer_dict):
     if False in model_layer_dict.values():
