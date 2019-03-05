@@ -109,13 +109,6 @@ for _ in xrange(args.seeds):
         loss2 = K.mean(model2.get_layer('before_softmax').output[..., orig_label])
         loss3 = -args.weight_diff * K.mean(model3.get_layer('before_softmax').output[..., orig_label])
 
-    # Need to remove mean and use unravel on index 1 (see utils.py)
-    # print(model3.get_layer(layer_name3).output.shape)
-    # print(list(model3.get_layer(layer_name3).output.shape)[1:])
-    # print(np.unravel_index(index3,list(model3.get_layer(layer_name3).output.shape)[1:]))
-    # print(index3)
-    # print(type(list(model3.get_layer(layer_name3).output.shape)[0]))
-
     # we run gradient ascent for 20 steps
     for iters in xrange(args.grad_iterations):
 
@@ -155,6 +148,8 @@ for _ in xrange(args.seeds):
             update_coverage(gen_img, model1, model_layer_dict1, args.threshold)
             update_coverage(gen_img, model2, model_layer_dict2, args.threshold)
             update_coverage(gen_img, model3, model_layer_dict3, args.threshold)
+
+            print("Found output which causes difference in models' predictions.")
 
             print(bcolors.OKGREEN + 'covered neurons percentage %d neurons %.3f, %d neurons %.3f, %d neurons %.3f'
                   % (len(model_layer_dict1), neuron_covered(model_layer_dict1)[2], len(model_layer_dict2),
