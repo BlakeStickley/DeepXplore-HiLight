@@ -94,7 +94,6 @@ def update_coverage(input_data, model, model_layer_dict, threshold=0):
         # print(type(scaled.shape))
         # print("SIZE : " + str(num_neurons(scaled)))
         for neuron in xrange(num_neurons(scaled.shape)): # index through every single (indiv) neuron
-
             if  scaled[np.unravel_index(neuron, scaled.shape)] > threshold and not model_layer_dict[(layer_names[i], neuron)]: # get rid of mean
                 model_layer_dict[(layer_names[i], neuron)] = True
 
