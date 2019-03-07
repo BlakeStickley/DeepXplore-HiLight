@@ -97,6 +97,8 @@ def update_coverage(input_data, model, model_layer_dict, threshold=0):
             if  scaled[np.unravel_index(neuron, scaled.shape)] > threshold and not model_layer_dict[(layer_names[i], neuron)]: # get rid of mean
                 model_layer_dict[(layer_names[i], neuron)] = True
 
+                
+
 def num_neurons(shape):
     return reduce(lambda x,y: x*y, filter(lambda x : x != None, shape))
 
