@@ -16,6 +16,8 @@ from Model3 import Model3
 from configs import bcolors
 from utils import *
 
+import pickle
+
 GEN_INPUTS_DIR='../generated_inputs/MNIST/'
 
 # read the parameter
@@ -34,6 +36,8 @@ parser.add_argument('-sp', '--start_point', help="occlusion upper left corner co
 parser.add_argument('-occl_size', '--occlusion_size', help="occlusion size", default=(10, 10), type=tuple)
 
 args = parser.parse_args()
+
+random.seed(4172306)
 
 # input image dimensions
 img_rows, img_cols = 28, 28
@@ -56,6 +60,9 @@ model3 = Model3(input_tensor=input_tensor)
 
 # init coverage table
 model_layer_dict1, model_layer_dict2, model_layer_dict3 = init_coverage_tables(model1, model2, model3)
+m1_hl = pickle.load(open( "m1.p", "rb" ))
+m2_hl = pickle.load(open( "m2.p", "rb" ))
+m3_hl = pickle.load(open( "m3.p", "rb" ))
 
 # ==============================================================================================
 # start gen inputs
@@ -70,9 +77,9 @@ for _ in xrange(args.seeds):
         print(bcolors.OKGREEN + 'input already causes different outputs: {}, {}, {}'.format(label1, label2,
                                                                                             label3) + bcolors.ENDC)
 
-        update_coverage(gen_img, model1, model_layer_dict1, args.threshold)
-        update_coverage(gen_img, model2, model_layer_dict2, args.threshold)
-        update_coverage(gen_img, model3, model_layer_dict3, args.threshold)
+        update_coverage(gen_img, model1, model_layer_dict1, m1_hl, args.threshold)
+        update_coverage(gen_img, model2, model_layer_dict2, m2_hl, args.threshold)
+        update_coverage(gen_img, model3, model_layer_dict3, m3_hl, args.threshold)
 
         print(bcolors.OKGREEN + 'covered neurons percentage %d neurons %.3f, %d neurons %.3f, %d neurons %.3f'
               % (len(model_layer_dict1), neuron_covered(model_layer_dict1)[2], len(model_layer_dict2),
@@ -145,9 +152,9 @@ for _ in xrange(args.seeds):
         predictions3 = np.argmax(model3.predict(gen_img)[0])
 
         if not predictions1 == predictions2 == predictions3:
-            update_coverage(gen_img, model1, model_layer_dict1, args.threshold)
-            update_coverage(gen_img, model2, model_layer_dict2, args.threshold)
-            update_coverage(gen_img, model3, model_layer_dict3, args.threshold)
+            update_coverage(gen_img, model1, model_layer_dict1, m1_hl, args.threshold)
+            update_coverage(gen_img, model2, model_layer_dict2, m2_hl, args.threshold)
+            update_coverage(gen_img, model3, model_layer_dict3, m3_hl, args.threshold)
 
             print("Found output which causes difference in models' predictions.")
 
