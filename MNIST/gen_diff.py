@@ -60,7 +60,7 @@ model3 = Model3(input_tensor=input_tensor)
 
 # init coverage table
 model_layer_dict1, model_layer_dict2, model_layer_dict3 = init_coverage_tables(model1, model2, model3)
-model_layer_dict_only_test1, model_layer_dict_only_test2, model_layer_dict_onlytest3 = init_coverage_tables(model1, model2, model3)
+model_layer_dict_only_test1, model_layer_dict_only_test2, model_layer_dict_only_test3 = init_coverage_tables(model1, model2, model3)
 m1_hl = pickle.load(open("m1.p", "rb"))
 m2_hl = pickle.load(open("m2.p", "rb"))
 m3_hl = pickle.load(open("m3.p", "rb"))

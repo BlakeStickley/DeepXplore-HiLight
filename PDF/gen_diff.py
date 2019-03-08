@@ -47,6 +47,10 @@ model2 = Model2(input_tensor=input_tensor, load_weights=True)
 model3 = Model3(input_tensor=input_tensor, load_weights=True)
 # init coverage table
 model_layer_dict1, model_layer_dict2, model_layer_dict3 = init_coverage_tables(model1, model2, model3)
+model_layer_dict_only_test1, model_layer_dict_only_test2, model_layer_dict_only_test3 = init_coverage_tables(model1, model2, model3)
+m1_hl = pickle.load(open("m1.p", "rb"))
+m2_hl = pickle.load(open("m2.p", "rb"))
+m3_hl = pickle.load(open("m3.p", "rb"))
 
 # ==============================================================================================
 # start gen inputs
@@ -57,6 +61,11 @@ test_data = X_test[:args.seeds]
 for idx, pdf in enumerate(test_data):
     gen_pdf = np.expand_dims(pdf, axis=0)
     orig_pdf = gen_pdf.copy()
+
+    update_coverage(gen_pdf, model1, model_layer_dict_only_test1, m1_hl, args.threshold)
+    update_coverage(gen_pdf, model2, model_layer_dict_only_test2, m2_hl, args.threshold)
+    update_coverage(gen_pdf, model3, model_layer_dict_only_test3, m3_hl, args.threshold)
+
     # first check if input already induces differences
     label1, label2, label3 = np.argmax(model1.predict(gen_pdf)[0]), np.argmax(model2.predict(gen_pdf)[0]), np.argmax(
         model3.predict(gen_pdf)[0])
@@ -64,9 +73,9 @@ for idx, pdf in enumerate(test_data):
         print(bcolors.OKGREEN + 'input already causes different outputs: {}, {}, {}'.format(label1, label2,
                                                                                             label3) + bcolors.ENDC)
 
-        update_coverage(gen_pdf, model1, model_layer_dict1, args.threshold)
-        update_coverage(gen_pdf, model2, model_layer_dict2, args.threshold)
-        update_coverage(gen_pdf, model3, model_layer_dict3, args.threshold)
+        update_coverage(gen_pdf, model1, model_layer_dict1, m1_hl, args.threshold)
+        update_coverage(gen_pdf, model2, model_layer_dict2, m2_hl, args.threshold)
+        update_coverage(gen_pdf, model3, model_layer_dict3, m3_hl, args.threshold)
 
         print(bcolors.OKGREEN + 'covered neurons percentage %d neurons %.3f, %d neurons %.3f, %d neurons %.3f'
               % (len(model_layer_dict1), neuron_covered(model_layer_dict1)[2], len(model_layer_dict2),
@@ -130,9 +139,9 @@ for idx, pdf in enumerate(test_data):
             model2.predict(gen_pdf)[0]), np.argmax(model3.predict(gen_pdf)[0])
 
         if not label1 == label2 == label3:
-            update_coverage(gen_pdf, model1, model_layer_dict1, args.threshold)
-            update_coverage(gen_pdf, model2, model_layer_dict2, args.threshold)
-            update_coverage(gen_pdf, model3, model_layer_dict3, args.threshold)
+            update_coverage(gen_pdf, model1, model_layer_dict1, m1_hl, args.threshold)
+            update_coverage(gen_pdf, model2, model_layer_dict2, m2_hl, args.threshold)
+            update_coverage(gen_pdf, model3, model_layer_dict3, m3_hl, args.threshold)
 
             print(bcolors.OKGREEN + 'covered neurons percentage %d neurons %.3f, %d neurons %.3f, %d neurons %.3f'
                   % (len(model_layer_dict1), neuron_covered(model_layer_dict1)[2], len(model_layer_dict2),
@@ -151,3 +160,28 @@ for idx, pdf in enumerate(test_data):
                     'name: {}, label1:{}, label2: {}, label3: {}\n'.format(names[idx], label1, label2, label3))
                 f.write('changed features: {}\n\n'.format(features_changed(gen_pdf, orig_pdf, feat_names)))
             break
+
+
+print("Final coverage metric from test data with adversarial example generation")
+print(bcolors.OKGREEN + 'covered neurons percentage %d neurons %.3f, %d neurons %.3f, %d neurons %.3f'
+                  % (len(model_layer_dict1), neuron_covered(model_layer_dict1)[2], len(model_layer_dict2),
+                     neuron_covered(model_layer_dict2)[2], len(model_layer_dict3),
+                     neuron_covered(model_layer_dict3)[2]) + bcolors.ENDC)
+averaged_nc = (neuron_covered(model_layer_dict1)[0] + neuron_covered(model_layer_dict2)[0] +
+                neuron_covered(model_layer_dict3)[0]) / float(
+    neuron_covered(model_layer_dict1)[1] + neuron_covered(model_layer_dict2)[1] +
+    neuron_covered(model_layer_dict3)[
+        1])
+print(bcolors.OKGREEN + 'averaged covered neurons %.3f' % averaged_nc + bcolors.ENDC)
+
+print("Final coverage metric solely from test data")
+print(bcolors.OKGREEN + 'covered neurons percentage %d neurons %.3f, %d neurons %.3f, %d neurons %.3f'
+        % (len(model_layer_dict_only_test1), neuron_covered(model_layer_dict_only_test1)[2], len(model_layer_dict_only_test2),
+            neuron_covered(model_layer_dict_only_test2)[2], len(model_layer_dict_only_test3),
+            neuron_covered(model_layer_dict_only_test3)[2]) + bcolors.ENDC)
+averaged_nc = (neuron_covered(model_layer_dict_only_test1)[0] + neuron_covered(model_layer_dict_only_test2)[0] +
+                neuron_covered(model_layer_dict_only_test3)[0]) / float(
+    neuron_covered(model_layer_dict_only_test1)[1] + neuron_covered(model_layer_dict_only_test2)[1] +
+    neuron_covered(model_layer_dict_only_test3)[
+        1])
+print(bcolors.OKGREEN + 'averaged covered neurons %.3f' % averaged_nc + bcolors.ENDC)

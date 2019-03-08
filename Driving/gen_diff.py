@@ -46,6 +46,10 @@ model2 = Dave_norminit(input_tensor=input_tensor, load_weights=True)
 model3 = Dave_dropout(input_tensor=input_tensor, load_weights=True)
 # init coverage table
 model_layer_dict1, model_layer_dict2, model_layer_dict3 = init_coverage_tables(model1, model2, model3)
+model_layer_dict_only_test1, model_layer_dict_only_test2, model_layer_dict_only_test3 = init_coverage_tables(model1, model2, model3)
+m1_hl = pickle.load(open("m1.p", "rb"))
+m2_hl = pickle.load(open("m2.p", "rb"))
+m3_hl = pickle.load(open("m3.p", "rb"))
 
 # ==============================================================================================
 # start gen inputs
@@ -58,15 +62,20 @@ testing_set = random.sample(testing_set, args.seeds)
 for img in testing_set:
     gen_img = preprocess_image(img)
     orig_img = gen_img.copy()
+
+    update_coverage(gen_img, model1, model_layer_dict_only_test1, m1_hl, args.threshold)
+    update_coverage(gen_img, model2, model_layer_dict_only_test2, m2_hl, args.threshold)
+    update_coverage(gen_img, model3, model_layer_dict_only_test3, m3_hl, args.threshold)
+
     # first check if input already induces differences
     angle1, angle2, angle3 = model1.predict(gen_img)[0], model2.predict(gen_img)[0], model3.predict(gen_img)[0]
     if angle_diverged(angle1, angle2, angle3):
         print(bcolors.OKGREEN + 'input already causes different outputs: {}, {}, {}'.format(angle1, angle2,
                                                                                             angle3) + bcolors.ENDC)
 
-        update_coverage(gen_img, model1, model_layer_dict1, args.threshold)
-        update_coverage(gen_img, model2, model_layer_dict2, args.threshold)
-        update_coverage(gen_img, model3, model_layer_dict3, args.threshold)
+        update_coverage(gen_img, model1, model_layer_dict1, m1_hl, args.threshold)
+        update_coverage(gen_img, model2, model_layer_dict2, m2_hl, args.threshold)
+        update_coverage(gen_img, model3, model_layer_dict3, m3_hl, args.threshold)
 
         print(bcolors.OKGREEN + 'covered neurons percentage %d neurons %.3f, %d neurons %.3f, %d neurons %.3f'
               % (len(model_layer_dict1), neuron_covered(model_layer_dict1)[2], len(model_layer_dict2),
@@ -88,9 +97,7 @@ for img in testing_set:
 
     # if all turning angles roughly the same
     orig_angle1, orig_angle2, orig_angle3 = angle1, angle2, angle3
-    layer_name1, index1 = neuron_to_cover(model_layer_dict1)
-    layer_name2, index2 = neuron_to_cover(model_layer_dict2)
-    layer_name3, index3 = neuron_to_cover(model_layer_dict3)
+
 
     # construct joint loss function
     if args.target_model == 0:
@@ -105,22 +112,27 @@ for img in testing_set:
         loss1 = K.mean(model1.get_layer('before_prediction').output[..., 0])
         loss2 = K.mean(model2.get_layer('before_prediction').output[..., 0])
         loss3 = -args.weight_diff * K.mean(model3.get_layer('before_prediction').output[..., 0])
-    loss1_neuron = K.mean(model1.get_layer(layer_name1).output[..., index1])
-    loss2_neuron = K.mean(model2.get_layer(layer_name2).output[..., index2])
-    loss3_neuron = K.mean(model3.get_layer(layer_name3).output[..., index3])
-    layer_output = (loss1 + loss2 + loss3) + args.weight_nc * (loss1_neuron + loss2_neuron + loss3_neuron)
-
-    # for adversarial image generation
-    final_loss = K.mean(layer_output)
-
-    # we compute the gradient of the input picture wrt this loss
-    grads = normalize(K.gradients(final_loss, input_tensor)[0])
-
-    # this function returns the loss and grads given the input picture
-    iterate = K.function([input_tensor], [loss1, loss2, loss3, loss1_neuron, loss2_neuron, loss3_neuron, grads])
 
     # we run gradient ascent for 20 steps
     for iters in xrange(args.grad_iterations):
+
+        layer_name1, index1 = neuron_to_cover(model_layer_dict1)
+        layer_name2, index2 = neuron_to_cover(model_layer_dict2)
+        layer_name3, index3 = neuron_to_cover(model_layer_dict3)
+        loss1_neuron = K.mean(model1.get_layer(layer_name1).output[..., index1])
+        loss2_neuron = K.mean(model2.get_layer(layer_name2).output[..., index2])
+        loss3_neuron = K.mean(model3.get_layer(layer_name3).output[..., index3])
+        layer_output = (loss1 + loss2 + loss3) + args.weight_nc * (loss1_neuron + loss2_neuron + loss3_neuron)
+
+        # for adversarial image generation
+        final_loss = K.mean(layer_output)
+
+        # we compute the gradient of the input picture wrt this loss
+        grads = normalize(K.gradients(final_loss, input_tensor)[0])
+
+        # this function returns the loss and grads given the input picture
+        iterate = K.function([input_tensor], [loss1, loss2, loss3, loss1_neuron, loss2_neuron, loss3_neuron, grads])
+
         loss_value1, loss_value2, loss_value3, loss_neuron1, loss_neuron2, loss_neuron3, grads_value = iterate(
             [gen_img])
         if args.transformation == 'light':
@@ -135,9 +147,9 @@ for img in testing_set:
         angle1, angle2, angle3 = model1.predict(gen_img)[0], model2.predict(gen_img)[0], model3.predict(gen_img)[0]
 
         if angle_diverged(angle1, angle2, angle3):
-            update_coverage(gen_img, model1, model_layer_dict1, args.threshold)
-            update_coverage(gen_img, model2, model_layer_dict2, args.threshold)
-            update_coverage(gen_img, model3, model_layer_dict3, args.threshold)
+            update_coverage(gen_img, model1, model_layer_dict1, m1_hl, args.threshold)
+            update_coverage(gen_img, model2, model_layer_dict2, m2_hl, args.threshold)
+            update_coverage(gen_img, model3, model_layer_dict3, m3_hl, args.threshold)
 
             print(bcolors.OKGREEN + 'covered neurons percentage %d neurons %.3f, %d neurons %.3f, %d neurons %.3f'
                   % (len(model_layer_dict1), neuron_covered(model_layer_dict1)[2], len(model_layer_dict2),
@@ -159,3 +171,27 @@ for img in testing_set:
             imsave(GEN_INPUTS_DIR + args.transformation + '_' + str(angle1) + '_' + str(angle2) + '_' + str(
                 angle3) + '_orig.png', orig_img_deprocessed)
             break
+
+print("Final coverage metric from test data with adversarial example generation")
+print(bcolors.OKGREEN + 'covered neurons percentage %d neurons %.3f, %d neurons %.3f, %d neurons %.3f'
+                  % (len(model_layer_dict1), neuron_covered(model_layer_dict1)[2], len(model_layer_dict2),
+                     neuron_covered(model_layer_dict2)[2], len(model_layer_dict3),
+                     neuron_covered(model_layer_dict3)[2]) + bcolors.ENDC)
+averaged_nc = (neuron_covered(model_layer_dict1)[0] + neuron_covered(model_layer_dict2)[0] +
+                neuron_covered(model_layer_dict3)[0]) / float(
+    neuron_covered(model_layer_dict1)[1] + neuron_covered(model_layer_dict2)[1] +
+    neuron_covered(model_layer_dict3)[
+        1])
+print(bcolors.OKGREEN + 'averaged covered neurons %.3f' % averaged_nc + bcolors.ENDC)
+
+print("Final coverage metric solely from test data")
+print(bcolors.OKGREEN + 'covered neurons percentage %d neurons %.3f, %d neurons %.3f, %d neurons %.3f'
+        % (len(model_layer_dict_only_test1), neuron_covered(model_layer_dict_only_test1)[2], len(model_layer_dict_only_test2),
+            neuron_covered(model_layer_dict_only_test2)[2], len(model_layer_dict_only_test3),
+            neuron_covered(model_layer_dict_only_test3)[2]) + bcolors.ENDC)
+averaged_nc = (neuron_covered(model_layer_dict_only_test1)[0] + neuron_covered(model_layer_dict_only_test2)[0] +
+                neuron_covered(model_layer_dict_only_test3)[0]) / float(
+    neuron_covered(model_layer_dict_only_test1)[1] + neuron_covered(model_layer_dict_only_test2)[1] +
+    neuron_covered(model_layer_dict_only_test3)[
+        1])
+print(bcolors.OKGREEN + 'averaged covered neurons %.3f' % averaged_nc + bcolors.ENDC)
