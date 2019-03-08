@@ -67,8 +67,11 @@ m3_hl = pickle.load(open("m3.p", "rb"))
 
 # ==============================================================================================
 # start gen inputs
-for _ in xrange(args.seeds):
-    gen_img = np.expand_dims(random.choice(x_test), axis=0)
+random.shuffle(x_test)
+x_test = x_test[:args.seeds]
+
+for img in x_test:
+    gen_img = np.expand_dims(img, axis=0)
     orig_img = gen_img.copy()
     # first check if input already induces differences
     label1, label2, label3 = np.argmax(model1.predict(gen_img)[0]), np.argmax(model2.predict(gen_img)[0]), np.argmax(
