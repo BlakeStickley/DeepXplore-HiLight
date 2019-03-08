@@ -12,6 +12,8 @@ from driving_models import *
 from utils import *
 GEN_INPUTS_DIR='../generated_inputs/Driving/'
 
+random.seed(4172306)
+
 # read the parameter
 # argument parsing
 parser = argparse.ArgumentParser(
@@ -48,8 +50,13 @@ model_layer_dict1, model_layer_dict2, model_layer_dict3 = init_coverage_tables(m
 # ==============================================================================================
 # start gen inputs
 img_paths = image.list_pictures('./testing/center', ext='jpg')
-for _ in xrange(args.seeds):
-    gen_img = preprocess_image(random.choice(img_paths))
+random.shuffle(img_paths)
+testing_set = img_paths[:2000]
+training_set = img_paths[2000:]
+testing_set = random.sample(testing_set, args.seeds)
+
+for img in testing_set:
+    gen_img = preprocess_image(img)
     orig_img = gen_img.copy()
     # first check if input already induces differences
     angle1, angle2, angle3 = model1.predict(gen_img)[0], model2.predict(gen_img)[0], model3.predict(gen_img)[0]

@@ -60,9 +60,10 @@ model3 = Model3(input_tensor=input_tensor)
 
 # init coverage table
 model_layer_dict1, model_layer_dict2, model_layer_dict3 = init_coverage_tables(model1, model2, model3)
-m1_hl = pickle.load(open( "m1.p", "rb" ))
-m2_hl = pickle.load(open( "m2.p", "rb" ))
-m3_hl = pickle.load(open( "m3.p", "rb" ))
+model_layer_dict_only_test1, model_layer_dict_only_test2, model_layer_dict_onlytest3 = init_coverage_tables(model1, model2, model3)
+m1_hl = pickle.load(open("m1.p", "rb"))
+m2_hl = pickle.load(open("m2.p", "rb"))
+m3_hl = pickle.load(open("m3.p", "rb"))
 
 # ==============================================================================================
 # start gen inputs
@@ -72,6 +73,10 @@ for _ in xrange(args.seeds):
     # first check if input already induces differences
     label1, label2, label3 = np.argmax(model1.predict(gen_img)[0]), np.argmax(model2.predict(gen_img)[0]), np.argmax(
         model3.predict(gen_img)[0])
+
+    update_coverage(gen_img, model1, model_layer_dict_only_test1, m1_hl, args.threshold)
+    update_coverage(gen_img, model2, model_layer_dict_only_test2, m2_hl, args.threshold)
+    update_coverage(gen_img, model3, model_layer_dict_only_test3, m3_hl, args.threshold)
 
     if not label1 == label2 == label3:
         print(bcolors.OKGREEN + 'input already causes different outputs: {}, {}, {}'.format(label1, label2,
@@ -180,3 +185,27 @@ for _ in xrange(args.seeds):
                 predictions2) + '_' + str(predictions3) + '_orig.png',
                    orig_img_deprocessed)
             break
+
+print("Final coverage metric from test data with adversarial example generation")
+print(bcolors.OKGREEN + 'covered neurons percentage %d neurons %.3f, %d neurons %.3f, %d neurons %.3f'
+                  % (len(model_layer_dict1), neuron_covered(model_layer_dict1)[2], len(model_layer_dict2),
+                     neuron_covered(model_layer_dict2)[2], len(model_layer_dict3),
+                     neuron_covered(model_layer_dict3)[2]) + bcolors.ENDC)
+averaged_nc = (neuron_covered(model_layer_dict1)[0] + neuron_covered(model_layer_dict2)[0] +
+                neuron_covered(model_layer_dict3)[0]) / float(
+    neuron_covered(model_layer_dict1)[1] + neuron_covered(model_layer_dict2)[1] +
+    neuron_covered(model_layer_dict3)[
+        1])
+print(bcolors.OKGREEN + 'averaged covered neurons %.3f' % averaged_nc + bcolors.ENDC)
+
+print("Final coverage metric solely from test data")
+print(bcolors.OKGREEN + 'covered neurons percentage %d neurons %.3f, %d neurons %.3f, %d neurons %.3f'
+        % (len(model_layer_dict_only_test1), neuron_covered(model_layer_dict_only_test1)[2], len(model_layer_dict_only_test2),
+            neuron_covered(model_layer_dict_only_test2)[2], len(model_layer_dict_only_test3),
+            neuron_covered(model_layer_dict_only_test3)[2]) + bcolors.ENDC)
+averaged_nc = (neuron_covered(model_layer_dict_only_test1)[0] + neuron_covered(model_layer_dict_only_test2)[0] +
+                neuron_covered(model_layer_dict_only_test3)[0]) / float(
+    neuron_covered(model_layer_dict_only_test1)[1] + neuron_covered(model_layer_dict_only_test2)[1] +
+    neuron_covered(model_layer_dict_only_test3)[
+        1])
+print(bcolors.OKGREEN + 'averaged covered neurons %.3f' % averaged_nc + bcolors.ENDC)

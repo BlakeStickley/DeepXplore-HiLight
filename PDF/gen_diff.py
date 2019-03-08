@@ -12,6 +12,8 @@ from scipy.misc import imsave
 from pdf_models import *
 from utils import *
 
+random.seed(4172306)
+
 # read the parameter
 # argument parsing
 parser = argparse.ArgumentParser(
@@ -48,9 +50,12 @@ model_layer_dict1, model_layer_dict2, model_layer_dict3 = init_coverage_tables(m
 
 # ==============================================================================================
 # start gen inputs
-for _ in xrange(args.seeds):
-    idx = random.randint(0, len(X_test))
-    gen_pdf = np.expand_dims(X_test[idx], axis=0)
+
+random.shuffle(X_test)
+test_data = X_test[:args.seeds]
+
+for idx, pdf in enumerate(test_data):
+    gen_pdf = np.expand_dims(pdf, axis=0)
     orig_pdf = gen_pdf.copy()
     # first check if input already induces differences
     label1, label2, label3 = np.argmax(model1.predict(gen_pdf)[0]), np.argmax(model2.predict(gen_pdf)[0]), np.argmax(

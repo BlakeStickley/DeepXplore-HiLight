@@ -149,6 +149,8 @@ def update_coverage(input_data, model, model_layer_dict, threshold=0):
             if np.mean(scaled[..., num_neuron]) > threshold and not model_layer_dict[(layer_names[i], num_neuron)]:
                 model_layer_dict[(layer_names[i], num_neuron)] = True
 
+def num_neurons(shape):
+    return reduce(lambda x,y: x*y, filter(lambda x : x != None, shape))
 
 def full_coverage(model_layer_dict):
     if False in model_layer_dict.values():
