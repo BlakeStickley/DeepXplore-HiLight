@@ -92,6 +92,21 @@ def update_coverage(input_data, model, model_layer_dict, model_layer_hl_dict, th
                 model_layer_dict[(layer_names[i], neuron)] = True
 
 
+# same
+def update_nc_coverage(input_data, model, model_layer_nc_dict, threshold=0):
+    layer_names = [layer.name for layer in model.layers if
+                   'flatten' not in layer.name and 'input' not in layer.name]
+
+    intermediate_layer_model = Model(inputs=model.input,
+                                     outputs=[model.get_layer(layer_name).output for layer_name in layer_names])
+    intermediate_layer_outputs = intermediate_layer_model.predict(input_data)
+
+    for i, intermediate_layer_output in enumerate(intermediate_layer_outputs):
+        layer = intermediate_layer_output[0]
+        for neuron in xrange(num_neurons(layer.shape)): # index through every single (indiv) neuron
+            if  layer[np.unravel_index(neuron, layer.shape)] > threshold and not model_layer_nc_dict[(layer_names[i], neuron)]: # get rid of mean
+                model_layer_nc_dict[(layer_names[i], neuron)] = True
+
 
 def num_neurons(shape):
     return reduce(lambda x,y: x*y, filter(lambda x : x != None, shape))

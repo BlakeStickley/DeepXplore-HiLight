@@ -59,21 +59,28 @@ model2 = Model2(input_tensor=input_tensor)
 model3 = Model3(input_tensor=input_tensor)
 
 # init coverage table
+# model_layer_dict = SNAC coverage (note: this impl uses SNAC to guide neuron selection as well)
+# model_layer_dict_only_test = measuring SNAC coverage from test data only (ignoring generated inputs from applied gradients)
+# model_layer_nc_dict = NC coverage (analagous to model_layer_dict - still using the same SNAC neuron selection though)
 model_layer_dict1, model_layer_dict2, model_layer_dict3 = init_coverage_tables(model1, model2, model3)
 model_layer_dict_only_test1, model_layer_dict_only_test2, model_layer_dict_only_test3 = init_coverage_tables(model1, model2, model3)
-m1_hl = pickle.load(open("m1.p", "rb"))
-m2_hl = pickle.load(open("m2.p", "rb"))
-m3_hl = pickle.load(open("m3.p", "rb"))
+model_layer_nc_dict1, model_layer_nc_dict2, model_layer_nc_dict3 = init_coverage_tables(model1, model2, model3)
+m1_hl = pickle.load(open("m1-10000-samples.p", "rb"))
+m2_hl = pickle.load(open("m2-10000-samples.p", "rb"))
+m3_hl = pickle.load(open("m3-10000-samples.p", "rb"))
 
 # ==============================================================================================
 # start gen inputs
-for _ in xrange(args.seeds):
+for iter in xrange(args.seeds):
+    print("Iteration " + str(iter+1))
     gen_img = np.expand_dims(random.choice(x_test), axis=0)
     orig_img = gen_img.copy()
     # first check if input already induces differences
     label1, label2, label3 = np.argmax(model1.predict(gen_img)[0]), np.argmax(model2.predict(gen_img)[0]), np.argmax(
         model3.predict(gen_img)[0])
 
+    # measuring test-only coverage (ie don't include these only_test dictionaries when computing updated coverage
+    # after applying gradients
     update_coverage(gen_img, model1, model_layer_dict_only_test1, m1_hl, args.threshold)
     update_coverage(gen_img, model2, model_layer_dict_only_test2, m2_hl, args.threshold)
     update_coverage(gen_img, model3, model_layer_dict_only_test3, m3_hl, args.threshold)
@@ -85,17 +92,33 @@ for _ in xrange(args.seeds):
         update_coverage(gen_img, model1, model_layer_dict1, m1_hl, args.threshold)
         update_coverage(gen_img, model2, model_layer_dict2, m2_hl, args.threshold)
         update_coverage(gen_img, model3, model_layer_dict3, m3_hl, args.threshold)
+        update_nc_coverage(gen_img, model1, model_layer_nc_dict1, args.threshold)
+        update_nc_coverage(gen_img, model2, model_layer_nc_dict2, args.threshold)
+        update_nc_coverage(gen_img, model3, model_layer_nc_dict3, args.threshold)
 
-        print(bcolors.OKGREEN + 'covered neurons percentage %d neurons %.3f, %d neurons %.3f, %d neurons %.3f'
+        print(bcolors.OKGREEN + 'SNAC percentage %d neurons %.3f, %d neurons %.3f, %d neurons %.3f'
               % (len(model_layer_dict1), neuron_covered(model_layer_dict1)[2], len(model_layer_dict2),
                  neuron_covered(model_layer_dict2)[2], len(model_layer_dict3),
                  neuron_covered(model_layer_dict3)[2]) + bcolors.ENDC)
-        averaged_nc = (neuron_covered(model_layer_dict1)[0] + neuron_covered(model_layer_dict2)[0] +
+        averaged_snac = (neuron_covered(model_layer_dict1)[0] + neuron_covered(model_layer_dict2)[0] +
                        neuron_covered(model_layer_dict3)[0]) / float(
             neuron_covered(model_layer_dict1)[1] + neuron_covered(model_layer_dict2)[1] +
             neuron_covered(model_layer_dict3)[
                 1])
+        print(bcolors.OKGREEN + 'averaged SNAC %.3f' % averaged_snac + bcolors.ENDC)
+
+        print(bcolors.OKGREEN + 'covered neurons percentage %d neurons %.3f, %d neurons %.3f, %d neurons %.3f'
+              % (len(model_layer_nc_dict1), neuron_covered(model_layer_nc_dict1)[2], len(model_layer_nc_dict2),
+                 neuron_covered(model_layer_nc_dict2)[2], len(model_layer_nc_dict3),
+                 neuron_covered(model_layer_nc_dict3)[2]) + bcolors.ENDC)
+        averaged_nc = (neuron_covered(model_layer_nc_dict1)[0] + neuron_covered(model_layer_nc_dict2)[0] +
+                       neuron_covered(model_layer_nc_dict3)[0]) / float(
+            neuron_covered(model_layer_nc_dict1)[1] + neuron_covered(model_layer_nc_dict2)[1] +
+            neuron_covered(model_layer_nc_dict3)[
+                1])
         print(bcolors.OKGREEN + 'averaged covered neurons %.3f' % averaged_nc + bcolors.ENDC)
+
+
 
         gen_img_deprocessed = deprocess_image(gen_img)
 
@@ -160,17 +183,31 @@ for _ in xrange(args.seeds):
             update_coverage(gen_img, model1, model_layer_dict1, m1_hl, args.threshold)
             update_coverage(gen_img, model2, model_layer_dict2, m2_hl, args.threshold)
             update_coverage(gen_img, model3, model_layer_dict3, m3_hl, args.threshold)
+            update_nc_coverage(gen_img, model1, model_layer_nc_dict1, args.threshold)
+            update_nc_coverage(gen_img, model2, model_layer_nc_dict2, args.threshold)
+            update_nc_coverage(gen_img, model3, model_layer_nc_dict3, args.threshold)
 
             print("Found output which causes difference in models' predictions.")
 
-            print(bcolors.OKGREEN + 'covered neurons percentage %d neurons %.3f, %d neurons %.3f, %d neurons %.3f'
+            print(bcolors.OKGREEN + 'SNAC percentage %d neurons %.3f, %d neurons %.3f, %d neurons %.3f'
                   % (len(model_layer_dict1), neuron_covered(model_layer_dict1)[2], len(model_layer_dict2),
                      neuron_covered(model_layer_dict2)[2], len(model_layer_dict3),
                      neuron_covered(model_layer_dict3)[2]) + bcolors.ENDC)
-            averaged_nc = (neuron_covered(model_layer_dict1)[0] + neuron_covered(model_layer_dict2)[0] +
-                           neuron_covered(model_layer_dict3)[0]) / float(
+            averaged_snac = (neuron_covered(model_layer_dict1)[0] + neuron_covered(model_layer_dict2)[0] +
+                             neuron_covered(model_layer_dict3)[0]) / float(
                 neuron_covered(model_layer_dict1)[1] + neuron_covered(model_layer_dict2)[1] +
                 neuron_covered(model_layer_dict3)[
+                    1])
+            print(bcolors.OKGREEN + 'averaged SNAC %.3f' % averaged_snac + bcolors.ENDC)
+
+            print(bcolors.OKGREEN + 'covered neurons percentage %d neurons %.3f, %d neurons %.3f, %d neurons %.3f'
+                  % (len(model_layer_nc_dict1), neuron_covered(model_layer_nc_dict1)[2], len(model_layer_nc_dict2),
+                     neuron_covered(model_layer_nc_dict2)[2], len(model_layer_nc_dict3),
+                     neuron_covered(model_layer_nc_dict3)[2]) + bcolors.ENDC)
+            averaged_nc = (neuron_covered(model_layer_nc_dict1)[0] + neuron_covered(model_layer_nc_dict2)[0] +
+                           neuron_covered(model_layer_nc_dict3)[0]) / float(
+                neuron_covered(model_layer_nc_dict1)[1] + neuron_covered(model_layer_nc_dict2)[1] +
+                neuron_covered(model_layer_nc_dict3)[
                     1])
             print(bcolors.OKGREEN + 'averaged covered neurons %.3f' % averaged_nc + bcolors.ENDC)
 
@@ -187,16 +224,31 @@ for _ in xrange(args.seeds):
             break
 
 print("Final coverage metric from test data with adversarial example generation")
-print(bcolors.OKGREEN + 'covered neurons percentage %d neurons %.3f, %d neurons %.3f, %d neurons %.3f'
-                  % (len(model_layer_dict1), neuron_covered(model_layer_dict1)[2], len(model_layer_dict2),
-                     neuron_covered(model_layer_dict2)[2], len(model_layer_dict3),
-                     neuron_covered(model_layer_dict3)[2]) + bcolors.ENDC)
-averaged_nc = (neuron_covered(model_layer_dict1)[0] + neuron_covered(model_layer_dict2)[0] +
-                neuron_covered(model_layer_dict3)[0]) / float(
+
+
+print(bcolors.OKGREEN + 'SNAC percentage %d neurons %.3f, %d neurons %.3f, %d neurons %.3f'
+      % (len(model_layer_dict1), neuron_covered(model_layer_dict1)[2], len(model_layer_dict2),
+         neuron_covered(model_layer_dict2)[2], len(model_layer_dict3),
+         neuron_covered(model_layer_dict3)[2]) + bcolors.ENDC)
+averaged_snac = (neuron_covered(model_layer_dict1)[0] + neuron_covered(model_layer_dict2)[0] +
+               neuron_covered(model_layer_dict3)[0]) / float(
     neuron_covered(model_layer_dict1)[1] + neuron_covered(model_layer_dict2)[1] +
     neuron_covered(model_layer_dict3)[
         1])
+print(bcolors.OKGREEN + 'averaged SNAC %.3f' % averaged_snac + bcolors.ENDC)
+
+
+print(bcolors.OKGREEN + 'covered neurons percentage %d neurons %.3f, %d neurons %.3f, %d neurons %.3f'
+      % (len(model_layer_nc_dict1), neuron_covered(model_layer_nc_dict1)[2], len(model_layer_nc_dict2),
+         neuron_covered(model_layer_nc_dict2)[2], len(model_layer_nc_dict3),
+         neuron_covered(model_layer_nc_dict3)[2]) + bcolors.ENDC)
+averaged_nc = (neuron_covered(model_layer_nc_dict1)[0] + neuron_covered(model_layer_nc_dict2)[0] +
+               neuron_covered(model_layer_nc_dict3)[0]) / float(
+    neuron_covered(model_layer_nc_dict1)[1] + neuron_covered(model_layer_nc_dict2)[1] +
+    neuron_covered(model_layer_nc_dict3)[
+        1])
 print(bcolors.OKGREEN + 'averaged covered neurons %.3f' % averaged_nc + bcolors.ENDC)
+
 
 print("Final coverage metric solely from test data")
 print(bcolors.OKGREEN + 'covered neurons percentage %d neurons %.3f, %d neurons %.3f, %d neurons %.3f'
