@@ -107,7 +107,7 @@ for img in x_test:
     iter += 1
     gen_img = np.expand_dims(img, axis=0)
     orig_img = gen_img.copy()
-    
+
     # first check if input already induces differences
     label1, label2, label3 = np.argmax(model1.predict(gen_img)[0]), np.argmax(model2.predict(gen_img)[0]), np.argmax(
         model3.predict(gen_img)[0])
@@ -193,7 +193,7 @@ for img in x_test:
             update_coverage(gen_img, model2, m2_dict, m2_hl, args.threshold)
             update_coverage(gen_img, model3, m3_dict, m3_hl, args.threshold)
 
-            print("Found output which causes difference in models' predictions.")
+            print("Found new output which causes difference in models' predictions.")
             differences += 1
             outputCoverage(m1_dict["snac"], m2_dict["snac"], m3_dict["snac"], "SNAC")
             outputCoverage(m1_dict["nc"], m2_dict["nc"], m3_dict["nc"], "Neuron Coverage")

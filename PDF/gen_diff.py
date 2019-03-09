@@ -92,6 +92,9 @@ for idx, pdf in enumerate(test_data):
     print("\nIteration " + str(iter+1))
     iter += 1
 
+    outputCoverage(m1_dict["snac"], m2_dict["snac"], m3_dict["snac"], "SNAC")
+    outputCoverage(m1_dict["nc"], m2_dict["nc"], m3_dict["nc"], "Neuron Coverage")
+
     update_coverage(gen_pdf, model1, m1_dict, m1_hl, True, args.threshold)
     update_coverage(gen_pdf, model2, m2_dict, m2_hl, True, args.threshold)
     update_coverage(gen_pdf, model3, m3_dict, m3_hl, True, args.threshold)
@@ -167,7 +170,7 @@ for idx, pdf in enumerate(test_data):
             update_coverage(gen_pdf, model2, m2_dict, m2_hl, args.threshold)
             update_coverage(gen_pdf, model3, m3_dict, m3_hl, args.threshold)
 
-            print("Found output which causes difference in models' predictions.")
+            print("Found new output which causes difference in models' predictions.")
             differences += 1
             outputCoverage(m1_dict["snac"], m2_dict["snac"], m3_dict["snac"], "SNAC")
             outputCoverage(m1_dict["nc"], m2_dict["nc"], m3_dict["nc"], "Neuron Coverage")
