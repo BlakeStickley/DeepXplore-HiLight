@@ -76,7 +76,18 @@ def neuron_covered(model_layer_dict):
     return covered_neurons, total_neurons, covered_neurons / float(total_neurons)
 
 
-def update_coverage(input_data, model, model_layer_dict, model_layer_hl_dict, threshold=0):
+def update_coverage(input_data, model, model_layer_dict, model_layer_hl_dict, test_only=False, threshold=0):
+    snac = "snac"
+    nc = "nc"
+    if test_only:
+        snac = "snac_test"
+        nc = "nc_test"
+    
+    update_snac_coverage(input_data, model, model_layer_dict[snac], model_layer_hl_dict, threshold)
+    update_nc_coverage(input_data, model, model_layer_dict[nc], threshold)
+
+
+def update_snac_coverage(input_data, model, model_layer_dict, model_layer_hl_dict, threshold=0):
     layer_names = [layer.name for layer in model.layers if
                    'flatten' not in layer.name and 'input' not in layer.name]
 
