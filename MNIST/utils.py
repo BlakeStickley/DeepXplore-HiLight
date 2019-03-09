@@ -102,7 +102,7 @@ def update_coverage(input_data, model, model_layer_dict, model_layer_hl_dict, te
                 snac_dict[(layer_names[i], neuron)] = True
 
             # evaluate nc criteria
-            if  layer[np.unravel_index(neuron, layer.shape)] > high and not nc_dict[(layer_names[i], neuron)]: 
+            if  layer[np.unravel_index(neuron, layer.shape)] > threshold and not nc_dict[(layer_names[i], neuron)]: 
                 nc_dict[(layer_names[i], neuron)] = True
 
 
