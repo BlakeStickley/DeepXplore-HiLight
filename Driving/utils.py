@@ -135,7 +135,15 @@ def scale(intermediate_layer_output, rmax=1, rmin=0):
     return X_scaled
 
 
-def update_coverage(input_data, model, model_layer_dict, model_layer_hl_dict, threshold=0):
+def update_coverage(input_data, model, model_layer_dict, model_layer_hl_dict, test_only=False, threshold=0):
+    snac_dict, nc_dict = {}, {}
+    if test_only:
+        snac_dict = model_layer_dict["snac_test"]
+        nc_dict = model_layer_dict["nc_test"]
+    else:
+        snac_dict = model_layer_dict["snac"]
+        nc_dict = model_layer_dict["nc"]
+
     layer_names = [layer.name for layer in model.layers if
                    'flatten' not in layer.name and 'input' not in layer.name]
 
@@ -147,8 +155,14 @@ def update_coverage(input_data, model, model_layer_dict, model_layer_hl_dict, th
         layer = intermediate_layer_output[0]
         for neuron in xrange(num_neurons(layer.shape)): # index through every single (indiv) neuron
             _,high = model_layer_hl_dict[(layer_names[i], neuron)]
-            if  layer[np.unravel_index(neuron, layer.shape)] > high and not model_layer_dict[(layer_names[i], neuron)]: # get rid of mean
-                model_layer_dict[(layer_names[i], neuron)] = True
+
+            # evaluate snac criteria
+            if  layer[np.unravel_index(neuron, layer.shape)] > high and not snac_dict[(layer_names[i], neuron)]:
+                snac_dict[(layer_names[i], neuron)] = True
+
+            # evaluate nc criteria
+            if  layer[np.unravel_index(neuron, layer.shape)] > high and not nc_dict[(layer_names[i], neuron)]: 
+                nc_dict[(layer_names[i], neuron)] = True
 
 
 def num_neurons(shape):

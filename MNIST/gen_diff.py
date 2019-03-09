@@ -105,9 +105,9 @@ differences = 0
 for img in x_test:
     print("\nIteration " + str(iter+1))
     iter += 1
-
     gen_img = np.expand_dims(img, axis=0)
     orig_img = gen_img.copy()
+    
     # first check if input already induces differences
     label1, label2, label3 = np.argmax(model1.predict(gen_img)[0]), np.argmax(model2.predict(gen_img)[0]), np.argmax(
         model3.predict(gen_img)[0])
