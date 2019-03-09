@@ -4,3 +4,5 @@
 ./Drebin/dataset
 /Drebin/*.h5
 *.DS_Store
+.keras
+.viminfo
