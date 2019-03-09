@@ -1,0 +1,105 @@
+[92mModel compiled[0m
+[92mModel compiled[0m
+[92mModel compiled[0m
+
+Running DeepXplore with coverage: Neuron Coverage
+
+Iteration 1
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.060, 82670 neurons 0.119, 315542 neurons 0.089[0m
+[92maveraged SNAC 0.089[0m
+[92mNeuron Coverage percentage 82670 neurons 0.412, 82670 neurons 0.535, 315542 neurons 0.433[0m
+[92maveraged Neuron Coverage 0.447[0m
+
+Iteration 2
+
+Iteration 3
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.080, 82670 neurons 0.153, 315542 neurons 0.105[0m
+[92maveraged SNAC 0.109[0m
+[92mNeuron Coverage percentage 82670 neurons 0.706, 82670 neurons 0.806, 315542 neurons 0.696[0m
+[92maveraged Neuron Coverage 0.717[0m
+
+Iteration 4
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.083, 82670 neurons 0.157, 315542 neurons 0.108[0m
+[92maveraged SNAC 0.112[0m
+[92mNeuron Coverage percentage 82670 neurons 0.785, 82670 neurons 0.863, 315542 neurons 0.746[0m
+[92maveraged Neuron Coverage 0.773[0m
+
+Iteration 5
+
+Iteration 6
+
+Iteration 7
+
+Iteration 8
+
+Iteration 9
+
+Iteration 10
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.094, 82670 neurons 0.169, 315542 neurons 0.114[0m
+[92maveraged SNAC 0.120[0m
+[92mNeuron Coverage percentage 82670 neurons 0.833, 82670 neurons 0.890, 315542 neurons 0.781[0m
+[92maveraged Neuron Coverage 0.809[0m
+
+Iteration 11
+[92minput already causes different outputs: [-0.19378307], [-0.01020366], [0.03727489][0m
+[92mSNAC percentage 82670 neurons 0.094, 82670 neurons 0.169, 315542 neurons 0.114[0m
+[92maveraged SNAC 0.120[0m
+[92mNeuron Coverage percentage 82670 neurons 0.870, 82670 neurons 0.915, 315542 neurons 0.803[0m
+[92maveraged Neuron Coverage 0.834[0m
+
+Iteration 12
+[92minput already causes different outputs: [-0.21375649], [-0.01020366], [0.06100961][0m
+[92mSNAC percentage 82670 neurons 0.094, 82670 neurons 0.169, 315542 neurons 0.114[0m
+[92maveraged SNAC 0.120[0m
+[92mNeuron Coverage percentage 82670 neurons 0.886, 82670 neurons 0.926, 315542 neurons 0.813[0m
+[92maveraged Neuron Coverage 0.845[0m
+
+Iteration 13
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.094, 82670 neurons 0.169, 315542 neurons 0.114[0m
+[92maveraged SNAC 0.120[0m
+[92mNeuron Coverage percentage 82670 neurons 0.900, 82670 neurons 0.933, 315542 neurons 0.823[0m
+[92maveraged Neuron Coverage 0.855[0m
+
+Iteration 14
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.112, 82670 neurons 0.202, 315542 neurons 0.142[0m
+[92maveraged SNAC 0.148[0m
+[92mNeuron Coverage percentage 82670 neurons 0.912, 82670 neurons 0.937, 315542 neurons 0.826[0m
+[92maveraged Neuron Coverage 0.860[0m
+
+Iteration 15
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.116, 82670 neurons 0.208, 315542 neurons 0.145[0m
+[92maveraged SNAC 0.151[0m
+[92mNeuron Coverage percentage 82670 neurons 0.923, 82670 neurons 0.941, 315542 neurons 0.835[0m
+[92maveraged Neuron Coverage 0.869[0m
+
+Iteration 16
+
+Iteration 17
+
+Iteration 18
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.117, 82670 neurons 0.210, 315542 neurons 0.147[0m
+[92maveraged SNAC 0.153[0m
+[92mNeuron Coverage percentage 82670 neurons 0.927, 82670 neurons 0.943, 315542 neurons 0.839[0m
+[92maveraged Neuron Coverage 0.872[0m
+
+Iteration 19
+
+Iteration 20
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.124, 82670 neurons 0.218, 315542 neurons 0.150[0m
+[92maveraged SNAC 0.158[0m
+[92mNeuron Coverage percentage 82670 neurons 0.933, 82670 neurons 0.946, 315542 neurons 0.846[0m
+[92maveraged Neuron Coverage 0.878[0m
+
+Iteration 21
+
+Iteration 22
+[92minput already causes different outputs: [-0.33266264], [-0.01020366], [0.05185805][
