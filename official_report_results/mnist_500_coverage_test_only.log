@@ -1,0 +1,10 @@
+[94mModel1 loaded[0m
+[94mModel2 loaded[0m
+[94mModel3 loaded[0m
+
+Running DeepXplore with coverage: Neuron Coverage
+Final coverage metric solely from test data: 
+[92mSNAC percentage 6880 neurons 0.000, 9904 neurons 0.000, 10024 neurons 0.001[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.930, 9904 neurons 0.906, 10024 neurons 0.942[0m
+[92maveraged Neuron Coverage 0.926[0m
