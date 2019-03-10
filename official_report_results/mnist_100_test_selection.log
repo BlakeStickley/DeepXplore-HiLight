@@ -1,0 +1,610 @@
+[94mModel1 loaded[0m
+[94mModel2 loaded[0m
+[94mModel3 loaded[0m
+
+Running DeepXplore with coverage: Neuron Coverage
+
+Iteration 1
+[92mSNAC percentage 6880 neurons 0.000, 9904 neurons 0.000, 10024 neurons 0.000[0m
+[92maveraged SNAC 0.000[0m
+[92mNeuron Coverage percentage 6880 neurons 0.724, 9904 neurons 0.629, 10024 neurons 0.683[0m
+[92maveraged Neuron Coverage 0.674[0m
+
+Iteration 2
+[92mSNAC percentage 6880 neurons 0.000, 9904 neurons 0.000, 10024 neurons 0.000[0m
+[92maveraged SNAC 0.000[0m
+[92mNeuron Coverage percentage 6880 neurons 0.724, 9904 neurons 0.629, 10024 neurons 0.683[0m
+[92maveraged Neuron Coverage 0.674[0m
+
+Iteration 3
+[92mSNAC percentage 6880 neurons 0.000, 9904 neurons 0.000, 10024 neurons 0.000[0m
+[92maveraged SNAC 0.000[0m
+[92mNeuron Coverage percentage 6880 neurons 0.861, 9904 neurons 0.793, 10024 neurons 0.842[0m
+[92maveraged Neuron Coverage 0.829[0m
+
+Iteration 4
+[92mSNAC percentage 6880 neurons 0.000, 9904 neurons 0.000, 10024 neurons 0.000[0m
+[92maveraged SNAC 0.000[0m
+[92mNeuron Coverage percentage 6880 neurons 0.886, 9904 neurons 0.834, 10024 neurons 0.878[0m
+[92maveraged Neuron Coverage 0.864[0m
+
+Iteration 5
+[92mSNAC percentage 6880 neurons 0.000, 9904 neurons 0.000, 10024 neurons 0.000[0m
+[92maveraged SNAC 0.000[0m
+[92mNeuron Coverage percentage 6880 neurons 0.886, 9904 neurons 0.834, 10024 neurons 0.878[0m
+[92maveraged Neuron Coverage 0.864[0m
+
+Iteration 6
+[92mSNAC percentage 6880 neurons 0.000, 9904 neurons 0.000, 10024 neurons 0.000[0m
+[92maveraged SNAC 0.000[0m
+[92mNeuron Coverage percentage 6880 neurons 0.905, 9904 neurons 0.865, 10024 neurons 0.908[0m
+[92maveraged Neuron Coverage 0.892[0m
+
+Iteration 7
+[92mSNAC percentage 6880 neurons 0.000, 9904 neurons 0.000, 10024 neurons 0.000[0m
+[92maveraged SNAC 0.000[0m
+[92mNeuron Coverage percentage 6880 neurons 0.905, 9904 neurons 0.865, 10024 neurons 0.908[0m
+[92maveraged Neuron Coverage 0.892[0m
+
+Iteration 8
+[92mSNAC percentage 6880 neurons 0.000, 9904 neurons 0.000, 10024 neurons 0.000[0m
+[92maveraged SNAC 0.000[0m
+[92mNeuron Coverage percentage 6880 neurons 0.913, 9904 neurons 0.878, 10024 neurons 0.919[0m
+[92maveraged Neuron Coverage 0.902[0m
+
+Iteration 9
+[92mSNAC percentage 6880 neurons 0.000, 9904 neurons 0.000, 10024 neurons 0.000[0m
+[92maveraged SNAC 0.000[0m
+[92mNeuron Coverage percentage 6880 neurons 0.920, 9904 neurons 0.889, 10024 neurons 0.929[0m
+[92maveraged Neuron Coverage 0.912[0m
+
+Iteration 10
+[92mSNAC percentage 6880 neurons 0.000, 9904 neurons 0.000, 10024 neurons 0.000[0m
+[92maveraged SNAC 0.000[0m
+[92mNeuron Coverage percentage 6880 neurons 0.920, 9904 neurons 0.889, 10024 neurons 0.929[0m
+[92maveraged Neuron Coverage 0.912[0m
+
+Iteration 11
+[92mSNAC percentage 6880 neurons 0.000, 9904 neurons 0.000, 10024 neurons 0.000[0m
+[92maveraged SNAC 0.000[0m
+[92mNeuron Coverage percentage 6880 neurons 0.920, 9904 neurons 0.889, 10024 neurons 0.929[0m
+[92maveraged Neuron Coverage 0.912[0m
+
+Iteration 12
+[92mSNAC percentage 6880 neurons 0.000, 9904 neurons 0.000, 10024 neurons 0.000[0m
+[92maveraged SNAC 0.000[0m
+[92mNeuron Coverage percentage 6880 neurons 0.920, 9904 neurons 0.889, 10024 neurons 0.929[0m
+[92maveraged Neuron Coverage 0.912[0m
+
+Iteration 13
+[92mSNAC percentage 6880 neurons 0.000, 9904 neurons 0.000, 10024 neurons 0.000[0m
+[92maveraged SNAC 0.000[0m
+[92mNeuron Coverage percentage 6880 neurons 0.920, 9904 neurons 0.889, 10024 neurons 0.929[0m
+[92maveraged Neuron Coverage 0.912[0m
+
+Iteration 14
+[92mSNAC percentage 6880 neurons 0.000, 9904 neurons 0.000, 10024 neurons 0.000[0m
+[92maveraged SNAC 0.000[0m
+[92mNeuron Coverage percentage 6880 neurons 0.920, 9904 neurons 0.889, 10024 neurons 0.929[0m
+[92maveraged Neuron Coverage 0.912[0m
+
+Iteration 15
+[92mSNAC percentage 6880 neurons 0.000, 9904 neurons 0.000, 10024 neurons 0.000[0m
+[92maveraged SNAC 0.000[0m
+[92mNeuron Coverage percentage 6880 neurons 0.921, 9904 neurons 0.891, 10024 neurons 0.931[0m
+[92maveraged Neuron Coverage 0.913[0m
+
+Iteration 16
+[92mSNAC percentage 6880 neurons 0.000, 9904 neurons 0.000, 10024 neurons 0.000[0m
+[92maveraged SNAC 0.000[0m
+[92mNeuron Coverage percentage 6880 neurons 0.921, 9904 neurons 0.891, 10024 neurons 0.931[0m
+[92maveraged Neuron Coverage 0.913[0m
+
+Iteration 17
+[92mSNAC percentage 6880 neurons 0.000, 9904 neurons 0.000, 10024 neurons 0.000[0m
+[92maveraged SNAC 0.000[0m
+[92mNeuron Coverage percentage 6880 neurons 0.922, 9904 neurons 0.893, 10024 neurons 0.933[0m
+[92maveraged Neuron Coverage 0.915[0m
+
+Iteration 18
+[92mSNAC percentage 6880 neurons 0.000, 9904 neurons 0.000, 10024 neurons 0.000[0m
+[92maveraged SNAC 0.000[0m
+[92mNeuron Coverage percentage 6880 neurons 0.924, 9904 neurons 0.897, 10024 neurons 0.936[0m
+[92maveraged Neuron Coverage 0.918[0m
+
+Iteration 19
+[92mSNAC percentage 6880 neurons 0.000, 9904 neurons 0.000, 10024 neurons 0.000[0m
+[92maveraged SNAC 0.000[0m
+[92mNeuron Coverage percentage 6880 neurons 0.924, 9904 neurons 0.897, 10024 neurons 0.936[0m
+[92maveraged Neuron Coverage 0.918[0m
+
+Iteration 20
+[92mSNAC percentage 6880 neurons 0.000, 9904 neurons 0.000, 10024 neurons 0.001[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.930, 9904 neurons 0.906, 10024 neurons 0.942[0m
+[92maveraged Neuron Coverage 0.926[0m
+
+Iteration 21
+[92mSNAC percentage 6880 neurons 0.000, 9904 neurons 0.000, 10024 neurons 0.001[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.932, 9904 neurons 0.909, 10024 neurons 0.944[0m
+[92maveraged Neuron Coverage 0.928[0m
+
+Iteration 22
+[92mSNAC percentage 6880 neurons 0.000, 9904 neurons 0.000, 10024 neurons 0.001[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.935, 9904 neurons 0.913, 10024 neurons 0.947[0m
+[92maveraged Neuron Coverage 0.931[0m
+
+Iteration 23
+[92mSNAC percentage 6880 neurons 0.000, 9904 neurons 0.000, 10024 neurons 0.001[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.935, 9904 neurons 0.913, 10024 neurons 0.947[0m
+[92maveraged Neuron Coverage 0.931[0m
+
+Iteration 24
+[92mSNAC percentage 6880 neurons 0.000, 9904 neurons 0.000, 10024 neurons 0.001[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.935, 9904 neurons 0.913, 10024 neurons 0.947[0m
+[92maveraged Neuron Coverage 0.931[0m
+
+Iteration 25
+[92mSNAC percentage 6880 neurons 0.000, 9904 neurons 0.000, 10024 neurons 0.001[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.935, 9904 neurons 0.913, 10024 neurons 0.948[0m
+[92maveraged Neuron Coverage 0.932[0m
+
+Iteration 26
+[92mSNAC percentage 6880 neurons 0.000, 9904 neurons 0.000, 10024 neurons 0.001[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.935, 9904 neurons 0.913, 10024 neurons 0.948[0m
+[92maveraged Neuron Coverage 0.932[0m
+
+Iteration 27
+[92mSNAC percentage 6880 neurons 0.000, 9904 neurons 0.000, 10024 neurons 0.001[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.935, 9904 neurons 0.913, 10024 neurons 0.948[0m
+[92maveraged Neuron Coverage 0.932[0m
+
+Iteration 28
+[92mSNAC percentage 6880 neurons 0.000, 9904 neurons 0.000, 10024 neurons 0.001[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.935, 9904 neurons 0.913, 10024 neurons 0.948[0m
+[92maveraged Neuron Coverage 0.932[0m
+
+Iteration 29
+[92mSNAC percentage 6880 neurons 0.000, 9904 neurons 0.000, 10024 neurons 0.001[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.938, 9904 neurons 0.917, 10024 neurons 0.951[0m
+[92maveraged Neuron Coverage 0.935[0m
+
+Iteration 30
+[92mSNAC percentage 6880 neurons 0.000, 9904 neurons 0.000, 10024 neurons 0.001[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.938, 9904 neurons 0.917, 10024 neurons 0.951[0m
+[92maveraged Neuron Coverage 0.935[0m
+
+Iteration 31
+[92mSNAC percentage 6880 neurons 0.000, 9904 neurons 0.000, 10024 neurons 0.001[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.938, 9904 neurons 0.917, 10024 neurons 0.951[0m
+[92maveraged Neuron Coverage 0.935[0m
+
+Iteration 32
+[92mSNAC percentage 6880 neurons 0.000, 9904 neurons 0.000, 10024 neurons 0.001[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.938, 9904 neurons 0.918, 10024 neurons 0.951[0m
+[92maveraged Neuron Coverage 0.936[0m
+
+Iteration 33
+[92mSNAC percentage 6880 neurons 0.000, 9904 neurons 0.000, 10024 neurons 0.001[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.942, 9904 neurons 0.920, 10024 neurons 0.953[0m
+[92maveraged Neuron Coverage 0.938[0m
+
+Iteration 34
+[92mSNAC percentage 6880 neurons 0.000, 9904 neurons 0.000, 10024 neurons 0.001[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.942, 9904 neurons 0.920, 10024 neurons 0.953[0m
+[92maveraged Neuron Coverage 0.938[0m
+
+Iteration 35
+[92mSNAC percentage 6880 neurons 0.000, 9904 neurons 0.000, 10024 neurons 0.001[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.942, 9904 neurons 0.920, 10024 neurons 0.953[0m
+[92maveraged Neuron Coverage 0.938[0m
+
+Iteration 36
+[92mSNAC percentage 6880 neurons 0.000, 9904 neurons 0.000, 10024 neurons 0.001[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.942, 9904 neurons 0.920, 10024 neurons 0.953[0m
+[92maveraged Neuron Coverage 0.938[0m
+
+Iteration 37
+[92mSNAC percentage 6880 neurons 0.000, 9904 neurons 0.000, 10024 neurons 0.001[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.942, 9904 neurons 0.921, 10024 neurons 0.954[0m
+[92maveraged Neuron Coverage 0.939[0m
+
+Iteration 38
+[92mSNAC percentage 6880 neurons 0.000, 9904 neurons 0.000, 10024 neurons 0.001[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.943, 9904 neurons 0.921, 10024 neurons 0.954[0m
+[92maveraged Neuron Coverage 0.939[0m
+
+Iteration 39
+[92mSNAC percentage 6880 neurons 0.000, 9904 neurons 0.000, 10024 neurons 0.001[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.943, 9904 neurons 0.921, 10024 neurons 0.954[0m
+[92maveraged Neuron Coverage 0.939[0m
+
+Iteration 40
+[92mSNAC percentage 6880 neurons 0.000, 9904 neurons 0.000, 10024 neurons 0.001[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.943, 9904 neurons 0.921, 10024 neurons 0.954[0m
+[92maveraged Neuron Coverage 0.939[0m
+
+Iteration 41
+[92mSNAC percentage 6880 neurons 0.000, 9904 neurons 0.000, 10024 neurons 0.001[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.943, 9904 neurons 0.921, 10024 neurons 0.954[0m
+[92maveraged Neuron Coverage 0.939[0m
+
+Iteration 42
+[92mSNAC percentage 6880 neurons 0.000, 9904 neurons 0.000, 10024 neurons 0.001[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.943, 9904 neurons 0.921, 10024 neurons 0.954[0m
+[92maveraged Neuron Coverage 0.939[0m
+
+Iteration 43
+[92mSNAC percentage 6880 neurons 0.000, 9904 neurons 0.000, 10024 neurons 0.001[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.943, 9904 neurons 0.921, 10024 neurons 0.954[0m
+[92maveraged Neuron Coverage 0.939[0m
+
+Iteration 44
+[92mSNAC percentage 6880 neurons 0.000, 9904 neurons 0.000, 10024 neurons 0.001[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.943, 9904 neurons 0.921, 10024 neurons 0.955[0m
+[92maveraged Neuron Coverage 0.939[0m
+
+Iteration 45
+[92mSNAC percentage 6880 neurons 0.000, 9904 neurons 0.000, 10024 neurons 0.001[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.943, 9904 neurons 0.921, 10024 neurons 0.955[0m
+[92maveraged Neuron Coverage 0.939[0m
+
+Iteration 46
+[92mSNAC percentage 6880 neurons 0.000, 9904 neurons 0.000, 10024 neurons 0.001[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.943, 9904 neurons 0.921, 10024 neurons 0.955[0m
+[92maveraged Neuron Coverage 0.939[0m
+
+Iteration 47
+[92mSNAC percentage 6880 neurons 0.001, 9904 neurons 0.001, 10024 neurons 0.001[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.945, 9904 neurons 0.924, 10024 neurons 0.957[0m
+[92maveraged Neuron Coverage 0.942[0m
+
+Iteration 48
+[92mSNAC percentage 6880 neurons 0.001, 9904 neurons 0.001, 10024 neurons 0.001[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.945, 9904 neurons 0.924, 10024 neurons 0.957[0m
+[92maveraged Neuron Coverage 0.942[0m
+
+Iteration 49
+[92mSNAC percentage 6880 neurons 0.001, 9904 neurons 0.001, 10024 neurons 0.001[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.945, 9904 neurons 0.925, 10024 neurons 0.958[0m
+[92maveraged Neuron Coverage 0.942[0m
+
+Iteration 50
+[92mSNAC percentage 6880 neurons 0.001, 9904 neurons 0.001, 10024 neurons 0.001[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.945, 9904 neurons 0.926, 10024 neurons 0.959[0m
+[92maveraged Neuron Coverage 0.943[0m
+
+Iteration 51
+[92mSNAC percentage 6880 neurons 0.001, 9904 neurons 0.001, 10024 neurons 0.001[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.945, 9904 neurons 0.926, 10024 neurons 0.959[0m
+[92maveraged Neuron Coverage 0.943[0m
+
+Iteration 52
+[92mSNAC percentage 6880 neurons 0.001, 9904 neurons 0.001, 10024 neurons 0.001[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.947, 9904 neurons 0.928, 10024 neurons 0.960[0m
+[92maveraged Neuron Coverage 0.945[0m
+
+Iteration 53
+[92mSNAC percentage 6880 neurons 0.001, 9904 neurons 0.001, 10024 neurons 0.001[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.947, 9904 neurons 0.928, 10024 neurons 0.960[0m
+[92maveraged Neuron Coverage 0.945[0m
+
+Iteration 54
+[92mSNAC percentage 6880 neurons 0.001, 9904 neurons 0.001, 10024 neurons 0.001[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.947, 9904 neurons 0.928, 10024 neurons 0.960[0m
+[92maveraged Neuron Coverage 0.945[0m
+
+Iteration 55
+[92mSNAC percentage 6880 neurons 0.001, 9904 neurons 0.001, 10024 neurons 0.001[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.947, 9904 neurons 0.928, 10024 neurons 0.960[0m
+[92maveraged Neuron Coverage 0.945[0m
+
+Iteration 56
+[92mSNAC percentage 6880 neurons 0.001, 9904 neurons 0.001, 10024 neurons 0.001[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.947, 9904 neurons 0.928, 10024 neurons 0.960[0m
+[92maveraged Neuron Coverage 0.945[0m
+
+Iteration 57
+[92mSNAC percentage 6880 neurons 0.001, 9904 neurons 0.001, 10024 neurons 0.001[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.947, 9904 neurons 0.928, 10024 neurons 0.960[0m
+[92maveraged Neuron Coverage 0.945[0m
+
+Iteration 58
+[92mSNAC percentage 6880 neurons 0.001, 9904 neurons 0.001, 10024 neurons 0.001[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.947, 9904 neurons 0.928, 10024 neurons 0.960[0m
+[92maveraged Neuron Coverage 0.945[0m
+
+Iteration 59
+[92mSNAC percentage 6880 neurons 0.001, 9904 neurons 0.001, 10024 neurons 0.001[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.947, 9904 neurons 0.928, 10024 neurons 0.960[0m
+[92maveraged Neuron Coverage 0.945[0m
+
+Iteration 60
+[92mSNAC percentage 6880 neurons 0.001, 9904 neurons 0.001, 10024 neurons 0.001[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.947, 9904 neurons 0.928, 10024 neurons 0.960[0m
+[92maveraged Neuron Coverage 0.945[0m
+
+Iteration 61
+[92mSNAC percentage 6880 neurons 0.001, 9904 neurons 0.001, 10024 neurons 0.001[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.947, 9904 neurons 0.928, 10024 neurons 0.960[0m
+[92maveraged Neuron Coverage 0.945[0m
+
+Iteration 62
+[92mSNAC percentage 6880 neurons 0.001, 9904 neurons 0.001, 10024 neurons 0.001[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.947, 9904 neurons 0.928, 10024 neurons 0.960[0m
+[92maveraged Neuron Coverage 0.945[0m
+
+Iteration 63
+[92mSNAC percentage 6880 neurons 0.001, 9904 neurons 0.001, 10024 neurons 0.001[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.948, 9904 neurons 0.930, 10024 neurons 0.961[0m
+[92maveraged Neuron Coverage 0.946[0m
+
+Iteration 64
+[92mSNAC percentage 6880 neurons 0.001, 9904 neurons 0.001, 10024 neurons 0.001[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.948, 9904 neurons 0.930, 10024 neurons 0.961[0m
+[92maveraged Neuron Coverage 0.946[0m
+
+Iteration 65
+[92mSNAC percentage 6880 neurons 0.001, 9904 neurons 0.001, 10024 neurons 0.001[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.948, 9904 neurons 0.932, 10024 neurons 0.961[0m
+[92maveraged Neuron Coverage 0.947[0m
+
+Iteration 66
+[92mSNAC percentage 6880 neurons 0.001, 9904 neurons 0.001, 10024 neurons 0.001[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.948, 9904 neurons 0.932, 10024 neurons 0.961[0m
+[92maveraged Neuron Coverage 0.947[0m
+
+Iteration 67
+[92mSNAC percentage 6880 neurons 0.001, 9904 neurons 0.001, 10024 neurons 0.001[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.948, 9904 neurons 0.932, 10024 neurons 0.961[0m
+[92maveraged Neuron Coverage 0.947[0m
+
+Iteration 68
+[92mSNAC percentage 6880 neurons 0.001, 9904 neurons 0.001, 10024 neurons 0.001[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.948, 9904 neurons 0.932, 10024 neurons 0.961[0m
+[92maveraged Neuron Coverage 0.947[0m
+
+Iteration 69
+[92mSNAC percentage 6880 neurons 0.001, 9904 neurons 0.001, 10024 neurons 0.001[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.951, 9904 neurons 0.937, 10024 neurons 0.964[0m
+[92maveraged Neuron Coverage 0.951[0m
+
+Iteration 70
+[92mSNAC percentage 6880 neurons 0.001, 9904 neurons 0.001, 10024 neurons 0.001[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.951, 9904 neurons 0.937, 10024 neurons 0.964[0m
+[92maveraged Neuron Coverage 0.951[0m
+
+Iteration 71
+[92mSNAC percentage 6880 neurons 0.001, 9904 neurons 0.001, 10024 neurons 0.001[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.954, 9904 neurons 0.940, 10024 neurons 0.966[0m
+[92maveraged Neuron Coverage 0.953[0m
+
+Iteration 72
+[92mSNAC percentage 6880 neurons 0.001, 9904 neurons 0.001, 10024 neurons 0.001[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.954, 9904 neurons 0.940, 10024 neurons 0.966[0m
+[92maveraged Neuron Coverage 0.953[0m
+
+Iteration 73
+[92mSNAC percentage 6880 neurons 0.001, 9904 neurons 0.001, 10024 neurons 0.002[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.954, 9904 neurons 0.940, 10024 neurons 0.966[0m
+[92maveraged Neuron Coverage 0.953[0m
+
+Iteration 74
+[92mSNAC percentage 6880 neurons 0.001, 9904 neurons 0.001, 10024 neurons 0.002[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.954, 9904 neurons 0.940, 10024 neurons 0.966[0m
+[92maveraged Neuron Coverage 0.953[0m
+
+Iteration 75
+[92mSNAC percentage 6880 neurons 0.001, 9904 neurons 0.001, 10024 neurons 0.002[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.954, 9904 neurons 0.941, 10024 neurons 0.966[0m
+[92maveraged Neuron Coverage 0.954[0m
+
+Iteration 76
+[92mSNAC percentage 6880 neurons 0.001, 9904 neurons 0.001, 10024 neurons 0.002[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.954, 9904 neurons 0.941, 10024 neurons 0.966[0m
+[92maveraged Neuron Coverage 0.954[0m
+
+Iteration 77
+[92mSNAC percentage 6880 neurons 0.001, 9904 neurons 0.001, 10024 neurons 0.002[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.955, 9904 neurons 0.941, 10024 neurons 0.967[0m
+[92maveraged Neuron Coverage 0.954[0m
+
+Iteration 78
+[92mSNAC percentage 6880 neurons 0.001, 9904 neurons 0.001, 10024 neurons 0.002[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.955, 9904 neurons 0.941, 10024 neurons 0.967[0m
+[92maveraged Neuron Coverage 0.954[0m
+
+Iteration 79
+[92mSNAC percentage 6880 neurons 0.001, 9904 neurons 0.001, 10024 neurons 0.002[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.955, 9904 neurons 0.941, 10024 neurons 0.967[0m
+[92maveraged Neuron Coverage 0.954[0m
+
+Iteration 80
+[92mSNAC percentage 6880 neurons 0.001, 9904 neurons 0.001, 10024 neurons 0.002[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.955, 9904 neurons 0.941, 10024 neurons 0.967[0m
+[92maveraged Neuron Coverage 0.954[0m
+
+Iteration 81
+[92mSNAC percentage 6880 neurons 0.001, 9904 neurons 0.001, 10024 neurons 0.002[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.955, 9904 neurons 0.943, 10024 neurons 0.967[0m
+[92maveraged Neuron Coverage 0.955[0m
+
+Iteration 82
+[92mSNAC percentage 6880 neurons 0.001, 9904 neurons 0.001, 10024 neurons 0.002[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.955, 9904 neurons 0.943, 10024 neurons 0.968[0m
+[92maveraged Neuron Coverage 0.955[0m
+
+Iteration 83
+[92mSNAC percentage 6880 neurons 0.001, 9904 neurons 0.001, 10024 neurons 0.002[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.955, 9904 neurons 0.943, 10024 neurons 0.968[0m
+[92maveraged Neuron Coverage 0.955[0m
+
+Iteration 84
+[92mSNAC percentage 6880 neurons 0.001, 9904 neurons 0.001, 10024 neurons 0.002[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.955, 9904 neurons 0.943, 10024 neurons 0.968[0m
+[92maveraged Neuron Coverage 0.955[0m
+
+Iteration 85
+[92mSNAC percentage 6880 neurons 0.001, 9904 neurons 0.001, 10024 neurons 0.002[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.955, 9904 neurons 0.943, 10024 neurons 0.968[0m
+[92maveraged Neuron Coverage 0.955[0m
+
+Iteration 86
+[92mSNAC percentage 6880 neurons 0.001, 9904 neurons 0.001, 10024 neurons 0.002[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.955, 9904 neurons 0.943, 10024 neurons 0.968[0m
+[92maveraged Neuron Coverage 0.955[0m
+
+Iteration 87
+[92mSNAC percentage 6880 neurons 0.001, 9904 neurons 0.001, 10024 neurons 0.002[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.955, 9904 neurons 0.943, 10024 neurons 0.968[0m
+[92maveraged Neuron Coverage 0.955[0m
+
+Iteration 88
+[92mSNAC percentage 6880 neurons 0.001, 9904 neurons 0.001, 10024 neurons 0.002[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.955, 9904 neurons 0.943, 10024 neurons 0.968[0m
+[92maveraged Neuron Coverage 0.955[0m
+
+Iteration 89
+[92mSNAC percentage 6880 neurons 0.001, 9904 neurons 0.001, 10024 neurons 0.002[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.955, 9904 neurons 0.943, 10024 neurons 0.968[0m
+[92maveraged Neuron Coverage 0.955[0m
+
+Iteration 90
+[92mSNAC percentage 6880 neurons 0.001, 9904 neurons 0.001, 10024 neurons 0.002[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.955, 9904 neurons 0.943, 10024 neurons 0.968[0m
+[92maveraged Neuron Coverage 0.955[0m
+
+Iteration 91
+[92mSNAC percentage 6880 neurons 0.001, 9904 neurons 0.001, 10024 neurons 0.002[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.955, 9904 neurons 0.943, 10024 neurons 0.968[0m
+[92maveraged Neuron Coverage 0.955[0m
+
+Iteration 92
+[92mSNAC percentage 6880 neurons 0.001, 9904 neurons 0.001, 10024 neurons 0.002[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.955, 9904 neurons 0.943, 10024 neurons 0.968[0m
+[92maveraged Neuron Coverage 0.955[0m
+
+Iteration 93
+[92mSNAC percentage 6880 neurons 0.001, 9904 neurons 0.001, 10024 neurons 0.002[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.955, 9904 neurons 0.943, 10024 neurons 0.968[0m
+[92maveraged Neuron Coverage 0.955[0m
+
+Iteration 94
+[92mSNAC percentage 6880 neurons 0.001, 9904 neurons 0.001, 10024 neurons 0.002[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.955, 9904 neurons 0.943, 10024 neurons 0.968[0m
+[92maveraged Neuron Coverage 0.956[0m
+
+Iteration 95
+[92mSNAC percentage 6880 neurons 0.001, 9904 neurons 0.001, 10024 neurons 0.002[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.955, 9904 neurons 0.943, 10024 neurons 0.968[0m
+[92maveraged Neuron Coverage 0.956[0m
+
+Iteration 96
+[92mSNAC percentage 6880 neurons 0.001, 9904 neurons 0.001, 10024 neurons 0.002[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.955, 9904 neurons 0.943, 10024 neurons 0.968[0m
+[92maveraged Neuron Coverage 0.956[0m
+
+Iteration 97
+[92mSNAC percentage 6880 neurons 0.001, 9904 neurons 0.001, 10024 neurons 0.002[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.955, 9904 neurons 0.943, 10024 neurons 0.968[0m
+[92maveraged Neuron Coverage 0.956[0m
+
+Iteration 98
+[92mSNAC percentage 6880 neurons 0.001, 9904 neurons 0.001, 10024 neurons 0.002[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.955, 9904 neurons 0.943, 10024 neurons 0.968[0m
+[92maveraged Neuron Coverage 0.956[0m
+
+Iteration 99
+[92mSNAC percentage 6880 neurons 0.001, 9904 neurons 0.001, 10024 neurons 0.002[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.955, 9904 neurons 0.943, 10024 neurons 0.968[0m
+[92maveraged Neuron Coverage 0.956[0m
+
+Iteration 100
+[92mSNAC percentage 6880 neurons 0.001, 9904 neurons 0.001, 10024 neurons 0.002[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.955, 9904 neurons 0.943, 10024 neurons 0.968[0m
+[92maveraged Neuron Coverage 0.956[0m
+Final coverage metric solely from test data: 
+[92mSNAC percentage 6880 neurons 0.001, 9904 neurons 0.001, 10024 neurons 0.002[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 6880 neurons 0.955, 9904 neurons 0.943, 10024 neurons 0.968[0m
+[92maveraged Neuron Coverage 0.956[0m
