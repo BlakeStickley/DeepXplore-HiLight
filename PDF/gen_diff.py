@@ -122,24 +122,25 @@ for idx, pdf in enumerate(test_data):
         continue
 
     # construct joint loss function
+    orig_label = label1
+
     if args.target_model == 0:
-        loss1 = -args.weight_diff * K.mean(model1.get_layer('before_softmax').output[..., label1])
-        loss2 = K.mean(model2.get_layer('before_softmax').output[..., label1])
-        loss3 = K.mean(model3.get_layer('before_softmax').output[..., label1])
+        loss1 = -args.weight_diff * K.mean(model1.get_layer('before_softmax').output[..., orig_label])
+        loss2 = K.mean(model2.get_layer('before_softmax').output[..., orig_label])
+        loss3 = K.mean(model3.get_layer('before_softmax').output[..., orig_label])
     elif args.target_model == 1:
-        loss1 = K.mean(model1.get_layer('before_softmax').output[..., label2])
-        loss2 = -args.weight_diff * K.mean(model2.get_layer('before_softmax').output[..., label2])
-        loss3 = K.mean(model3.get_layer('before_softmax').output[..., label2])
+        loss1 = K.mean(model1.get_layer('before_softmax').output[..., orig_label])
+        loss2 = -args.weight_diff * K.mean(model2.get_layer('before_softmax').output[..., orig_label])
+        loss3 = K.mean(model3.get_layer('before_softmax').output[..., orig_label])
     elif args.target_model == 2:
-        loss1 = K.mean(model1.get_layer('before_softmax').output[..., label3])
-        loss2 = K.mean(model2.get_layer('before_softmax').output[..., label3])
-        loss3 = -args.weight_diff * K.mean(model3.get_layer('before_softmax').output[..., label3])
+        loss1 = K.mean(model1.get_layer('before_softmax').output[..., orig_label])
+        loss2 = K.mean(model2.get_layer('before_softmax').output[..., orig_label])
+        loss3 = -args.weight_diff * K.mean(model3.get_layer('before_softmax').output[..., orig_label])
 
     # we run gradient ascent for 20 steps
     for iters in xrange(args.grad_iterations):
 
         # if all turning angles roughly the same
-        orig_label = label1
         layer_name1, index1 = neuron_to_cover(m1_dict[args.coverage])
         layer_name2, index2 = neuron_to_cover(m2_dict[args.coverage])
         layer_name3, index3 = neuron_to_cover(m3_dict[args.coverage])

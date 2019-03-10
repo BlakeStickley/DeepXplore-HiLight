@@ -1,0 +1,1176 @@
+[92mModel compiled[0m
+[92mModel compiled[0m
+[92mModel compiled[0m
+
+Running DeepXplore with coverage: SNAC
+
+Iteration 1
+[92minput already causes different outputs: [0.27038705], [-0.01020366], [-0.09451467][0m
+[92mSNAC percentage 82670 neurons 0.000, 82670 neurons 0.000, 315542 neurons 0.000[0m
+[92maveraged SNAC 0.000[0m
+[92mNeuron Coverage percentage 82670 neurons 0.429, 82670 neurons 0.489, 315542 neurons 0.446[0m
+[92maveraged Neuron Coverage 0.451[0m
+
+Iteration 2
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.000, 82670 neurons 0.000, 315542 neurons 0.001[0m
+[92maveraged SNAC 0.001[0m
+[92mNeuron Coverage percentage 82670 neurons 0.587, 82670 neurons 0.661, 315542 neurons 0.578[0m
+[92maveraged Neuron Coverage 0.594[0m
+
+Iteration 3
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.002, 82670 neurons 0.003, 315542 neurons 0.005[0m
+[92maveraged SNAC 0.004[0m
+[92mNeuron Coverage percentage 82670 neurons 0.725, 82670 neurons 0.804, 315542 neurons 0.680[0m
+[92maveraged Neuron Coverage 0.709[0m
+
+Iteration 4
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.003, 82670 neurons 0.004, 315542 neurons 0.006[0m
+[92maveraged SNAC 0.005[0m
+[92mNeuron Coverage percentage 82670 neurons 0.784, 82670 neurons 0.847, 315542 neurons 0.719[0m
+[92maveraged Neuron Coverage 0.752[0m
+
+Iteration 5
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.003, 82670 neurons 0.004, 315542 neurons 0.006[0m
+[92maveraged SNAC 0.005[0m
+[92mNeuron Coverage percentage 82670 neurons 0.835, 82670 neurons 0.883, 315542 neurons 0.753[0m
+[92maveraged Neuron Coverage 0.790[0m
+
+Iteration 6
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.003, 82670 neurons 0.004, 315542 neurons 0.007[0m
+[92maveraged SNAC 0.006[0m
+[92mNeuron Coverage percentage 82670 neurons 0.859, 82670 neurons 0.901, 315542 neurons 0.773[0m
+[92maveraged Neuron Coverage 0.810[0m
+
+Iteration 7
+[92minput already causes different outputs: [0.20312485], [-0.01020366], [-0.00971354][0m
+[92mSNAC percentage 82670 neurons 0.004, 82670 neurons 0.005, 315542 neurons 0.007[0m
+[92maveraged SNAC 0.006[0m
+[92mNeuron Coverage percentage 82670 neurons 0.878, 82670 neurons 0.917, 315542 neurons 0.787[0m
+[92maveraged Neuron Coverage 0.825[0m
+
+Iteration 8
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.005, 82670 neurons 0.006, 315542 neurons 0.009[0m
+[92maveraged SNAC 0.008[0m
+[92mNeuron Coverage percentage 82670 neurons 0.892, 82670 neurons 0.925, 315542 neurons 0.795[0m
+[92maveraged Neuron Coverage 0.834[0m
+
+Iteration 9
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.005, 82670 neurons 0.006, 315542 neurons 0.009[0m
+[92maveraged SNAC 0.008[0m
+[92mNeuron Coverage percentage 82670 neurons 0.899, 82670 neurons 0.929, 315542 neurons 0.800[0m
+[92maveraged Neuron Coverage 0.839[0m
+
+Iteration 10
+[92minput already causes different outputs: [0.3107691], [-0.01020366], [0.13005906][0m
+[92mSNAC percentage 82670 neurons 0.005, 82670 neurons 0.006, 315542 neurons 0.010[0m
+[92maveraged SNAC 0.008[0m
+[92mNeuron Coverage percentage 82670 neurons 0.914, 82670 neurons 0.940, 315542 neurons 0.812[0m
+[92maveraged Neuron Coverage 0.852[0m
+
+Iteration 11
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.007, 82670 neurons 0.008, 315542 neurons 0.012[0m
+[92maveraged SNAC 0.011[0m
+[92mNeuron Coverage percentage 82670 neurons 0.918, 82670 neurons 0.942, 315542 neurons 0.818[0m
+[92maveraged Neuron Coverage 0.856[0m
+
+Iteration 12
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.008, 82670 neurons 0.009, 315542 neurons 0.015[0m
+[92maveraged SNAC 0.012[0m
+[92mNeuron Coverage percentage 82670 neurons 0.926, 82670 neurons 0.945, 315542 neurons 0.828[0m
+[92maveraged Neuron Coverage 0.865[0m
+
+Iteration 13
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.008, 82670 neurons 0.009, 315542 neurons 0.016[0m
+[92maveraged SNAC 0.013[0m
+[92mNeuron Coverage percentage 82670 neurons 0.928, 82670 neurons 0.946, 315542 neurons 0.831[0m
+[92maveraged Neuron Coverage 0.867[0m
+
+Iteration 14
+[92minput already causes different outputs: [0.23499241], [-0.01020366], [0.02211481][0m
+[92mSNAC percentage 82670 neurons 0.008, 82670 neurons 0.009, 315542 neurons 0.016[0m
+[92maveraged SNAC 0.013[0m
+[92mNeuron Coverage percentage 82670 neurons 0.935, 82670 neurons 0.952, 315542 neurons 0.837[0m
+[92maveraged Neuron Coverage 0.874[0m
+
+Iteration 15
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.009, 82670 neurons 0.010, 315542 neurons 0.017[0m
+[92maveraged SNAC 0.014[0m
+[92mNeuron Coverage percentage 82670 neurons 0.940, 82670 neurons 0.955, 315542 neurons 0.842[0m
+[92maveraged Neuron Coverage 0.878[0m
+
+Iteration 16
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.010, 82670 neurons 0.010, 315542 neurons 0.019[0m
+[92maveraged SNAC 0.016[0m
+[92mNeuron Coverage percentage 82670 neurons 0.942, 82670 neurons 0.957, 315542 neurons 0.845[0m
+[92maveraged Neuron Coverage 0.881[0m
+
+Iteration 17
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.011, 82670 neurons 0.011, 315542 neurons 0.020[0m
+[92maveraged SNAC 0.017[0m
+[92mNeuron Coverage percentage 82670 neurons 0.944, 82670 neurons 0.958, 315542 neurons 0.846[0m
+[92maveraged Neuron Coverage 0.882[0m
+
+Iteration 18
+[92minput already causes different outputs: [-0.01374795], [-0.01020366], [0.22474988][0m
+[92mSNAC percentage 82670 neurons 0.011, 82670 neurons 0.012, 315542 neurons 0.021[0m
+[92maveraged SNAC 0.018[0m
+[92mNeuron Coverage percentage 82670 neurons 0.947, 82670 neurons 0.960, 315542 neurons 0.849[0m
+[92maveraged Neuron Coverage 0.885[0m
+
+Iteration 19
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.012, 82670 neurons 0.013, 315542 neurons 0.023[0m
+[92maveraged SNAC 0.019[0m
+[92mNeuron Coverage percentage 82670 neurons 0.949, 82670 neurons 0.961, 315542 neurons 0.851[0m
+[92maveraged Neuron Coverage 0.887[0m
+
+Iteration 20
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.013, 82670 neurons 0.013, 315542 neurons 0.023[0m
+[92maveraged SNAC 0.020[0m
+[92mNeuron Coverage percentage 82670 neurons 0.950, 82670 neurons 0.963, 315542 neurons 0.854[0m
+[92maveraged Neuron Coverage 0.889[0m
+
+Iteration 21
+[92minput already causes different outputs: [0.20979856], [-0.01020366], [0.05497574][0m
+[92mSNAC percentage 82670 neurons 0.013, 82670 neurons 0.014, 315542 neurons 0.024[0m
+[92maveraged SNAC 0.020[0m
+[92mNeuron Coverage percentage 82670 neurons 0.953, 82670 neurons 0.964, 315542 neurons 0.856[0m
+[92maveraged Neuron Coverage 0.891[0m
+
+Iteration 22
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.013, 82670 neurons 0.014, 315542 neurons 0.024[0m
+[92maveraged SNAC 0.021[0m
+[92mNeuron Coverage percentage 82670 neurons 0.955, 82670 neurons 0.966, 315542 neurons 0.858[0m
+[92maveraged Neuron Coverage 0.893[0m
+
+Iteration 23
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.015, 82670 neurons 0.015, 315542 neurons 0.027[0m
+[92maveraged SNAC 0.023[0m
+[92mNeuron Coverage percentage 82670 neurons 0.960, 82670 neurons 0.969, 315542 neurons 0.862[0m
+[92maveraged Neuron Coverage 0.897[0m
+
+Iteration 24
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.015, 82670 neurons 0.016, 315542 neurons 0.028[0m
+[92maveraged SNAC 0.024[0m
+[92mNeuron Coverage percentage 82670 neurons 0.962, 82670 neurons 0.970, 315542 neurons 0.864[0m
+[92maveraged Neuron Coverage 0.899[0m
+
+Iteration 25
+[92minput already causes different outputs: [0.19315219], [-0.01020366], [0.23501305][0m
+[92mSNAC percentage 82670 neurons 0.015, 82670 neurons 0.016, 315542 neurons 0.028[0m
+[92maveraged SNAC 0.024[0m
+[92mNeuron Coverage percentage 82670 neurons 0.963, 82670 neurons 0.971, 315542 neurons 0.867[0m
+[92maveraged Neuron Coverage 0.901[0m
+
+Iteration 26
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.016, 82670 neurons 0.017, 315542 neurons 0.030[0m
+[92maveraged SNAC 0.025[0m
+[92mNeuron Coverage percentage 82670 neurons 0.965, 82670 neurons 0.972, 315542 neurons 0.868[0m
+[92maveraged Neuron Coverage 0.903[0m
+
+Iteration 27
+[92minput already causes different outputs: [0.21171643], [-0.01020366], [0.00439066][0m
+[92mSNAC percentage 82670 neurons 0.017, 82670 neurons 0.017, 315542 neurons 0.030[0m
+[92maveraged SNAC 0.025[0m
+[92mNeuron Coverage percentage 82670 neurons 0.965, 82670 neurons 0.973, 315542 neurons 0.869[0m
+[92maveraged Neuron Coverage 0.903[0m
+
+Iteration 28
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.018, 82670 neurons 0.018, 315542 neurons 0.032[0m
+[92maveraged SNAC 0.027[0m
+[92mNeuron Coverage percentage 82670 neurons 0.966, 82670 neurons 0.973, 315542 neurons 0.870[0m
+[92maveraged Neuron Coverage 0.905[0m
+
+Iteration 29
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.019, 82670 neurons 0.019, 315542 neurons 0.034[0m
+[92maveraged SNAC 0.029[0m
+[92mNeuron Coverage percentage 82670 neurons 0.969, 82670 neurons 0.974, 315542 neurons 0.872[0m
+[92maveraged Neuron Coverage 0.906[0m
+
+Iteration 30
+[92minput already causes different outputs: [0.15638953], [-0.01020366], [-0.05517168][0m
+[92mSNAC percentage 82670 neurons 0.019, 82670 neurons 0.019, 315542 neurons 0.034[0m
+[92maveraged SNAC 0.029[0m
+[92mNeuron Coverage percentage 82670 neurons 0.969, 82670 neurons 0.974, 315542 neurons 0.873[0m
+[92maveraged Neuron Coverage 0.907[0m
+
+Iteration 31
+[92minput already causes different outputs: [0.28731292], [-0.01020366], [0.26813573][0m
+[92mSNAC percentage 82670 neurons 0.019, 82670 neurons 0.019, 315542 neurons 0.035[0m
+[92maveraged SNAC 0.029[0m
+[92mNeuron Coverage percentage 82670 neurons 0.970, 82670 neurons 0.975, 315542 neurons 0.874[0m
+[92maveraged Neuron Coverage 0.908[0m
+
+Iteration 32
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.020, 82670 neurons 0.019, 315542 neurons 0.035[0m
+[92maveraged SNAC 0.029[0m
+[92mNeuron Coverage percentage 82670 neurons 0.971, 82670 neurons 0.975, 315542 neurons 0.875[0m
+[92maveraged Neuron Coverage 0.909[0m
+
+Iteration 33
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.020, 82670 neurons 0.020, 315542 neurons 0.036[0m
+[92maveraged SNAC 0.030[0m
+[92mNeuron Coverage percentage 82670 neurons 0.972, 82670 neurons 0.975, 315542 neurons 0.877[0m
+[92maveraged Neuron Coverage 0.910[0m
+
+Iteration 34
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.020, 82670 neurons 0.021, 315542 neurons 0.037[0m
+[92maveraged SNAC 0.031[0m
+[92mNeuron Coverage percentage 82670 neurons 0.973, 82670 neurons 0.976, 315542 neurons 0.878[0m
+[92maveraged Neuron Coverage 0.911[0m
+
+Iteration 35
+[92minput already causes different outputs: [-0.20430534], [-0.01020366], [0.09779169][0m
+[92mSNAC percentage 82670 neurons 0.021, 82670 neurons 0.021, 315542 neurons 0.037[0m
+[92maveraged SNAC 0.032[0m
+[92mNeuron Coverage percentage 82670 neurons 0.974, 82670 neurons 0.977, 315542 neurons 0.879[0m
+[92maveraged Neuron Coverage 0.912[0m
+
+Iteration 36
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.021, 82670 neurons 0.022, 315542 neurons 0.038[0m
+[92maveraged SNAC 0.032[0m
+[92mNeuron Coverage percentage 82670 neurons 0.975, 82670 neurons 0.978, 315542 neurons 0.880[0m
+[92maveraged Neuron Coverage 0.913[0m
+
+Iteration 37
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.021, 82670 neurons 0.022, 315542 neurons 0.038[0m
+[92maveraged SNAC 0.032[0m
+[92mNeuron Coverage percentage 82670 neurons 0.975, 82670 neurons 0.978, 315542 neurons 0.880[0m
+[92maveraged Neuron Coverage 0.913[0m
+
+Iteration 38
+[92minput already causes different outputs: [0.6689986], [-0.01020366], [0.43154344][0m
+[92mSNAC percentage 82670 neurons 0.021, 82670 neurons 0.022, 315542 neurons 0.039[0m
+[92maveraged SNAC 0.033[0m
+[92mNeuron Coverage percentage 82670 neurons 0.976, 82670 neurons 0.978, 315542 neurons 0.882[0m
+[92maveraged Neuron Coverage 0.915[0m
+
+Iteration 39
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.021, 82670 neurons 0.022, 315542 neurons 0.039[0m
+[92maveraged SNAC 0.033[0m
+[92mNeuron Coverage percentage 82670 neurons 0.977, 82670 neurons 0.979, 315542 neurons 0.883[0m
+[92maveraged Neuron Coverage 0.915[0m
+
+Iteration 40
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.022, 82670 neurons 0.023, 315542 neurons 0.040[0m
+[92maveraged SNAC 0.034[0m
+[92mNeuron Coverage percentage 82670 neurons 0.978, 82670 neurons 0.979, 315542 neurons 0.883[0m
+[92maveraged Neuron Coverage 0.916[0m
+
+Iteration 41
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.023, 82670 neurons 0.023, 315542 neurons 0.042[0m
+[92maveraged SNAC 0.035[0m
+[92mNeuron Coverage percentage 82670 neurons 0.978, 82670 neurons 0.979, 315542 neurons 0.884[0m
+[92maveraged Neuron Coverage 0.917[0m
+
+Iteration 42
+[92minput already causes different outputs: [0.28467703], [-0.01020366], [0.51053065][0m
+[92mSNAC percentage 82670 neurons 0.023, 82670 neurons 0.024, 315542 neurons 0.042[0m
+[92maveraged SNAC 0.035[0m
+[92mNeuron Coverage percentage 82670 neurons 0.979, 82670 neurons 0.980, 315542 neurons 0.885[0m
+[92maveraged Neuron Coverage 0.918[0m
+
+Iteration 43
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.024, 82670 neurons 0.024, 315542 neurons 0.043[0m
+[92maveraged SNAC 0.037[0m
+[92mNeuron Coverage percentage 82670 neurons 0.979, 82670 neurons 0.981, 315542 neurons 0.886[0m
+[92maveraged Neuron Coverage 0.918[0m
+
+Iteration 44
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.024, 82670 neurons 0.024, 315542 neurons 0.044[0m
+[92maveraged SNAC 0.037[0m
+[92mNeuron Coverage percentage 82670 neurons 0.980, 82670 neurons 0.981, 315542 neurons 0.886[0m
+[92maveraged Neuron Coverage 0.919[0m
+
+Iteration 45
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.025, 82670 neurons 0.025, 315542 neurons 0.045[0m
+[92maveraged SNAC 0.038[0m
+[92mNeuron Coverage percentage 82670 neurons 0.980, 82670 neurons 0.981, 315542 neurons 0.887[0m
+[92maveraged Neuron Coverage 0.919[0m
+
+Iteration 46
+[92minput already causes different outputs: [0.18329042], [-0.01020366], [-0.04463064][0m
+[92mSNAC percentage 82670 neurons 0.025, 82670 neurons 0.025, 315542 neurons 0.045[0m
+[92maveraged SNAC 0.038[0m
+[92mNeuron Coverage percentage 82670 neurons 0.980, 82670 neurons 0.982, 315542 neurons 0.888[0m
+[92maveraged Neuron Coverage 0.920[0m
+
+Iteration 47
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.025, 82670 neurons 0.025, 315542 neurons 0.046[0m
+[92maveraged SNAC 0.039[0m
+[92mNeuron Coverage percentage 82670 neurons 0.981, 82670 neurons 0.982, 315542 neurons 0.889[0m
+[92maveraged Neuron Coverage 0.921[0m
+
+Iteration 48
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.027, 82670 neurons 0.027, 315542 neurons 0.048[0m
+[92maveraged SNAC 0.041[0m
+[92mNeuron Coverage percentage 82670 neurons 0.981, 82670 neurons 0.982, 315542 neurons 0.889[0m
+[92maveraged Neuron Coverage 0.921[0m
+
+Iteration 49
+[92minput already causes different outputs: [-0.17548275], [-0.01020366], [0.08144219][0m
+[92mSNAC percentage 82670 neurons 0.027, 82670 neurons 0.027, 315542 neurons 0.049[0m
+[92maveraged SNAC 0.041[0m
+[92mNeuron Coverage percentage 82670 neurons 0.981, 82670 neurons 0.983, 315542 neurons 0.889[0m
+[92maveraged Neuron Coverage 0.921[0m
+
+Iteration 50
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.028, 82670 neurons 0.028, 315542 neurons 0.049[0m
+[92maveraged SNAC 0.042[0m
+[92mNeuron Coverage percentage 82670 neurons 0.982, 82670 neurons 0.983, 315542 neurons 0.890[0m
+[92maveraged Neuron Coverage 0.922[0m
+
+Iteration 51
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.028, 82670 neurons 0.028, 315542 neurons 0.050[0m
+[92maveraged SNAC 0.042[0m
+[92mNeuron Coverage percentage 82670 neurons 0.982, 82670 neurons 0.983, 315542 neurons 0.890[0m
+[92maveraged Neuron Coverage 0.922[0m
+
+Iteration 52
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.029, 82670 neurons 0.028, 315542 neurons 0.051[0m
+[92maveraged SNAC 0.043[0m
+[92mNeuron Coverage percentage 82670 neurons 0.982, 82670 neurons 0.984, 315542 neurons 0.891[0m
+[92maveraged Neuron Coverage 0.922[0m
+
+Iteration 53
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.029, 82670 neurons 0.029, 315542 neurons 0.052[0m
+[92maveraged SNAC 0.044[0m
+[92mNeuron Coverage percentage 82670 neurons 0.983, 82670 neurons 0.984, 315542 neurons 0.891[0m
+[92maveraged Neuron Coverage 0.923[0m
+
+Iteration 54
+[92minput already causes different outputs: [0.30146927], [-0.01020366], [0.18264088][0m
+[92mSNAC percentage 82670 neurons 0.030, 82670 neurons 0.029, 315542 neurons 0.053[0m
+[92maveraged SNAC 0.045[0m
+[92mNeuron Coverage percentage 82670 neurons 0.983, 82670 neurons 0.984, 315542 neurons 0.891[0m
+[92maveraged Neuron Coverage 0.923[0m
+
+Iteration 55
+[92minput already causes different outputs: [0.20485455], [-0.01020366], [-0.04349819][0m
+[92mSNAC percentage 82670 neurons 0.030, 82670 neurons 0.029, 315542 neurons 0.053[0m
+[92maveraged SNAC 0.045[0m
+[92mNeuron Coverage percentage 82670 neurons 0.983, 82670 neurons 0.985, 315542 neurons 0.892[0m
+[92maveraged Neuron Coverage 0.923[0m
+
+Iteration 56
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.030, 82670 neurons 0.030, 315542 neurons 0.053[0m
+[92maveraged SNAC 0.045[0m
+[92mNeuron Coverage percentage 82670 neurons 0.983, 82670 neurons 0.985, 315542 neurons 0.892[0m
+[92maveraged Neuron Coverage 0.924[0m
+
+Iteration 57
+[92minput already causes different outputs: [0.17275491], [-0.01020366], [0.2671493][0m
+[92mSNAC percentage 82670 neurons 0.030, 82670 neurons 0.030, 315542 neurons 0.053[0m
+[92maveraged SNAC 0.045[0m
+[92mNeuron Coverage percentage 82670 neurons 0.984, 82670 neurons 0.985, 315542 neurons 0.892[0m
+[92maveraged Neuron Coverage 0.924[0m
+
+Iteration 58
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.030, 82670 neurons 0.030, 315542 neurons 0.053[0m
+[92maveraged SNAC 0.045[0m
+[92mNeuron Coverage percentage 82670 neurons 0.984, 82670 neurons 0.985, 315542 neurons 0.893[0m
+[92maveraged Neuron Coverage 0.924[0m
+
+Iteration 59
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.031, 82670 neurons 0.030, 315542 neurons 0.054[0m
+[92maveraged SNAC 0.046[0m
+[92mNeuron Coverage percentage 82670 neurons 0.984, 82670 neurons 0.986, 315542 neurons 0.893[0m
+[92maveraged Neuron Coverage 0.925[0m
+
+Iteration 60
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.031, 82670 neurons 0.030, 315542 neurons 0.054[0m
+[92maveraged SNAC 0.046[0m
+[92mNeuron Coverage percentage 82670 neurons 0.984, 82670 neurons 0.986, 315542 neurons 0.893[0m
+[92maveraged Neuron Coverage 0.925[0m
+
+Iteration 61
+[92minput already causes different outputs: [0.211023], [-0.01020366], [0.3641518][0m
+[92mSNAC percentage 82670 neurons 0.031, 82670 neurons 0.030, 315542 neurons 0.054[0m
+[92maveraged SNAC 0.046[0m
+[92mNeuron Coverage percentage 82670 neurons 0.984, 82670 neurons 0.986, 315542 neurons 0.894[0m
+[92maveraged Neuron Coverage 0.925[0m
+
+Iteration 62
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.031, 82670 neurons 0.031, 315542 neurons 0.055[0m
+[92maveraged SNAC 0.047[0m
+[92mNeuron Coverage percentage 82670 neurons 0.985, 82670 neurons 0.986, 315542 neurons 0.894[0m
+[92maveraged Neuron Coverage 0.925[0m
+
+Iteration 63
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.031, 82670 neurons 0.031, 315542 neurons 0.055[0m
+[92maveraged SNAC 0.047[0m
+[92mNeuron Coverage percentage 82670 neurons 0.985, 82670 neurons 0.986, 315542 neurons 0.894[0m
+[92maveraged Neuron Coverage 0.926[0m
+
+Iteration 64
+[92minput already causes different outputs: [0.06550711], [-0.01020366], [0.24414904][0m
+[92mSNAC percentage 82670 neurons 0.031, 82670 neurons 0.031, 315542 neurons 0.055[0m
+[92maveraged SNAC 0.047[0m
+[92mNeuron Coverage percentage 82670 neurons 0.985, 82670 neurons 0.986, 315542 neurons 0.894[0m
+[92maveraged Neuron Coverage 0.926[0m
+
+Iteration 65
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.032, 82670 neurons 0.031, 315542 neurons 0.056[0m
+[92maveraged SNAC 0.047[0m
+[92mNeuron Coverage percentage 82670 neurons 0.985, 82670 neurons 0.987, 315542 neurons 0.895[0m
+[92maveraged Neuron Coverage 0.926[0m
+
+Iteration 66
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.032, 82670 neurons 0.031, 315542 neurons 0.056[0m
+[92maveraged SNAC 0.048[0m
+[92mNeuron Coverage percentage 82670 neurons 0.985, 82670 neurons 0.987, 315542 neurons 0.895[0m
+[92maveraged Neuron Coverage 0.926[0m
+
+Iteration 67
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.033, 82670 neurons 0.032, 315542 neurons 0.058[0m
+[92maveraged SNAC 0.049[0m
+[92mNeuron Coverage percentage 82670 neurons 0.985, 82670 neurons 0.987, 315542 neurons 0.895[0m
+[92maveraged Neuron Coverage 0.926[0m
+
+Iteration 68
+[92minput already causes different outputs: [0.15343244], [-0.01020366], [-0.18684186][0m
+[92mSNAC percentage 82670 neurons 0.033, 82670 neurons 0.032, 315542 neurons 0.058[0m
+[92maveraged SNAC 0.049[0m
+[92mNeuron Coverage percentage 82670 neurons 0.985, 82670 neurons 0.987, 315542 neurons 0.896[0m
+[92maveraged Neuron Coverage 0.927[0m
+
+Iteration 69
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.034, 82670 neurons 0.034, 315542 neurons 0.059[0m
+[92maveraged SNAC 0.051[0m
+[92mNeuron Coverage percentage 82670 neurons 0.986, 82670 neurons 0.987, 315542 neurons 0.896[0m
+[92maveraged Neuron Coverage 0.927[0m
+
+Iteration 70
+[92minput already causes different outputs: [0.27165654], [-0.01020366], [-0.02374054][0m
+[92mSNAC percentage 82670 neurons 0.034, 82670 neurons 0.034, 315542 neurons 0.060[0m
+[92maveraged SNAC 0.051[0m
+[92mNeuron Coverage percentage 82670 neurons 0.986, 82670 neurons 0.987, 315542 neurons 0.896[0m
+[92maveraged Neuron Coverage 0.927[0m
+
+Iteration 71
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.034, 82670 neurons 0.035, 315542 neurons 0.060[0m
+[92maveraged SNAC 0.051[0m
+[92mNeuron Coverage percentage 82670 neurons 0.986, 82670 neurons 0.987, 315542 neurons 0.897[0m
+[92maveraged Neuron Coverage 0.928[0m
+
+Iteration 72
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.035, 82670 neurons 0.035, 315542 neurons 0.061[0m
+[92maveraged SNAC 0.052[0m
+[92mNeuron Coverage percentage 82670 neurons 0.986, 82670 neurons 0.987, 315542 neurons 0.897[0m
+[92maveraged Neuron Coverage 0.928[0m
+
+Iteration 73
+[92minput already causes different outputs: [0.28699982], [-0.01020366], [0.04516284][0m
+[92mSNAC percentage 82670 neurons 0.036, 82670 neurons 0.036, 315542 neurons 0.061[0m
+[92maveraged SNAC 0.053[0m
+[92mNeuron Coverage percentage 82670 neurons 0.987, 82670 neurons 0.987, 315542 neurons 0.898[0m
+[92maveraged Neuron Coverage 0.928[0m
+
+Iteration 74
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.037, 82670 neurons 0.037, 315542 neurons 0.062[0m
+[92maveraged SNAC 0.054[0m
+[92mNeuron Coverage percentage 82670 neurons 0.987, 82670 neurons 0.988, 315542 neurons 0.898[0m
+[92maveraged Neuron Coverage 0.928[0m
+
+Iteration 75
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.037, 82670 neurons 0.037, 315542 neurons 0.062[0m
+[92maveraged SNAC 0.054[0m
+[92mNeuron Coverage percentage 82670 neurons 0.987, 82670 neurons 0.988, 315542 neurons 0.898[0m
+[92maveraged Neuron Coverage 0.929[0m
+
+Iteration 76
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.037, 82670 neurons 0.038, 315542 neurons 0.063[0m
+[92maveraged SNAC 0.054[0m
+[92mNeuron Coverage percentage 82670 neurons 0.987, 82670 neurons 0.988, 315542 neurons 0.898[0m
+[92maveraged Neuron Coverage 0.929[0m
+
+Iteration 77
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.038, 82670 neurons 0.038, 315542 neurons 0.064[0m
+[92maveraged SNAC 0.055[0m
+[92mNeuron Coverage percentage 82670 neurons 0.987, 82670 neurons 0.988, 315542 neurons 0.899[0m
+[92maveraged Neuron Coverage 0.929[0m
+
+Iteration 78
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.038, 82670 neurons 0.039, 315542 neurons 0.065[0m
+[92maveraged SNAC 0.056[0m
+[92mNeuron Coverage percentage 82670 neurons 0.987, 82670 neurons 0.988, 315542 neurons 0.899[0m
+[92maveraged Neuron Coverage 0.929[0m
+
+Iteration 79
+[92minput already causes different outputs: [0.34041154], [-0.01020366], [0.31854594][0m
+[92mSNAC percentage 82670 neurons 0.039, 82670 neurons 0.040, 315542 neurons 0.066[0m
+[92maveraged SNAC 0.057[0m
+[92mNeuron Coverage percentage 82670 neurons 0.987, 82670 neurons 0.988, 315542 neurons 0.899[0m
+[92maveraged Neuron Coverage 0.929[0m
+
+Iteration 80
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.040, 82670 neurons 0.040, 315542 neurons 0.067[0m
+[92maveraged SNAC 0.058[0m
+[92mNeuron Coverage percentage 82670 neurons 0.987, 82670 neurons 0.988, 315542 neurons 0.899[0m
+[92maveraged Neuron Coverage 0.930[0m
+
+Iteration 81
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.041, 82670 neurons 0.041, 315542 neurons 0.068[0m
+[92maveraged SNAC 0.059[0m
+[92mNeuron Coverage percentage 82670 neurons 0.987, 82670 neurons 0.988, 315542 neurons 0.900[0m
+[92maveraged Neuron Coverage 0.930[0m
+
+Iteration 82
+[92minput already causes different outputs: [0.24459805], [-0.01020366], [0.01810105][0m
+[92mSNAC percentage 82670 neurons 0.041, 82670 neurons 0.041, 315542 neurons 0.069[0m
+[92maveraged SNAC 0.059[0m
+[92mNeuron Coverage percentage 82670 neurons 0.988, 82670 neurons 0.989, 315542 neurons 0.900[0m
+[92maveraged Neuron Coverage 0.930[0m
+
+Iteration 83
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.041, 82670 neurons 0.041, 315542 neurons 0.069[0m
+[92maveraged SNAC 0.059[0m
+[92mNeuron Coverage percentage 82670 neurons 0.988, 82670 neurons 0.989, 315542 neurons 0.900[0m
+[92maveraged Neuron Coverage 0.930[0m
+
+Iteration 84
+[92minput already causes different outputs: [-0.30118966], [-0.01020366], [0.03641577][0m
+[92mSNAC percentage 82670 neurons 0.041, 82670 neurons 0.041, 315542 neurons 0.069[0m
+[92maveraged SNAC 0.059[0m
+[92mNeuron Coverage percentage 82670 neurons 0.988, 82670 neurons 0.989, 315542 neurons 0.900[0m
+[92maveraged Neuron Coverage 0.931[0m
+
+Iteration 85
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.041, 82670 neurons 0.042, 315542 neurons 0.069[0m
+[92maveraged SNAC 0.060[0m
+[92mNeuron Coverage percentage 82670 neurons 0.988, 82670 neurons 0.989, 315542 neurons 0.901[0m
+[92maveraged Neuron Coverage 0.931[0m
+
+Iteration 86
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.042, 82670 neurons 0.043, 315542 neurons 0.071[0m
+[92maveraged SNAC 0.061[0m
+[92mNeuron Coverage percentage 82670 neurons 0.988, 82670 neurons 0.989, 315542 neurons 0.901[0m
+[92maveraged Neuron Coverage 0.931[0m
+
+Iteration 87
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.042, 82670 neurons 0.043, 315542 neurons 0.071[0m
+[92maveraged SNAC 0.062[0m
+[92mNeuron Coverage percentage 82670 neurons 0.988, 82670 neurons 0.989, 315542 neurons 0.901[0m
+[92maveraged Neuron Coverage 0.931[0m
+
+Iteration 88
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.043, 82670 neurons 0.044, 315542 neurons 0.072[0m
+[92maveraged SNAC 0.062[0m
+[92mNeuron Coverage percentage 82670 neurons 0.989, 82670 neurons 0.989, 315542 neurons 0.901[0m
+[92maveraged Neuron Coverage 0.931[0m
+
+Iteration 89
+[92minput already causes different outputs: [0.3819476], [-0.01020366], [0.46079576][0m
+[92mSNAC percentage 82670 neurons 0.043, 82670 neurons 0.044, 315542 neurons 0.072[0m
+[92maveraged SNAC 0.062[0m
+[92mNeuron Coverage percentage 82670 neurons 0.989, 82670 neurons 0.989, 315542 neurons 0.902[0m
+[92maveraged Neuron Coverage 0.932[0m
+
+Iteration 90
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.044, 82670 neurons 0.046, 315542 neurons 0.074[0m
+[92maveraged SNAC 0.064[0m
+[92mNeuron Coverage percentage 82670 neurons 0.989, 82670 neurons 0.989, 315542 neurons 0.902[0m
+[92maveraged Neuron Coverage 0.932[0m
+
+Iteration 91
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.045, 82670 neurons 0.047, 315542 neurons 0.075[0m
+[92maveraged SNAC 0.065[0m
+[92mNeuron Coverage percentage 82670 neurons 0.989, 82670 neurons 0.989, 315542 neurons 0.902[0m
+[92maveraged Neuron Coverage 0.932[0m
+
+Iteration 92
+
+Iteration 93
+[92minput already causes different outputs: [0.20101176], [-0.01020366], [0.05547442][0m
+[92mSNAC percentage 82670 neurons 0.045, 82670 neurons 0.047, 315542 neurons 0.075[0m
+[92maveraged SNAC 0.065[0m
+[92mNeuron Coverage percentage 82670 neurons 0.989, 82670 neurons 0.989, 315542 neurons 0.902[0m
+[92maveraged Neuron Coverage 0.932[0m
+
+Iteration 94
+[92minput already causes different outputs: [0.18900181], [-0.01020366], [-0.0832874][0m
+[92mSNAC percentage 82670 neurons 0.045, 82670 neurons 0.047, 315542 neurons 0.075[0m
+[92maveraged SNAC 0.065[0m
+[92mNeuron Coverage percentage 82670 neurons 0.989, 82670 neurons 0.989, 315542 neurons 0.902[0m
+[92maveraged Neuron Coverage 0.932[0m
+
+Iteration 95
+[92minput already causes different outputs: [0.27958485], [-0.01020366], [0.43279862][0m
+[92mSNAC percentage 82670 neurons 0.046, 82670 neurons 0.048, 315542 neurons 0.076[0m
+[92maveraged SNAC 0.066[0m
+[92mNeuron Coverage percentage 82670 neurons 0.989, 82670 neurons 0.989, 315542 neurons 0.903[0m
+[92maveraged Neuron Coverage 0.932[0m
+
+Iteration 96
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.046, 82670 neurons 0.048, 315542 neurons 0.076[0m
+[92maveraged SNAC 0.066[0m
+[92mNeuron Coverage percentage 82670 neurons 0.989, 82670 neurons 0.989, 315542 neurons 0.903[0m
+[92maveraged Neuron Coverage 0.933[0m
+
+Iteration 97
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.046, 82670 neurons 0.048, 315542 neurons 0.077[0m
+[92maveraged SNAC 0.067[0m
+[92mNeuron Coverage percentage 82670 neurons 0.989, 82670 neurons 0.989, 315542 neurons 0.904[0m
+[92maveraged Neuron Coverage 0.933[0m
+
+Iteration 98
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.048, 82670 neurons 0.050, 315542 neurons 0.078[0m
+[92maveraged SNAC 0.068[0m
+[92mNeuron Coverage percentage 82670 neurons 0.990, 82670 neurons 0.989, 315542 neurons 0.904[0m
+[92maveraged Neuron Coverage 0.933[0m
+
+Iteration 99
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.048, 82670 neurons 0.051, 315542 neurons 0.079[0m
+[92maveraged SNAC 0.069[0m
+[92mNeuron Coverage percentage 82670 neurons 0.990, 82670 neurons 0.989, 315542 neurons 0.904[0m
+[92maveraged Neuron Coverage 0.933[0m
+
+Iteration 100
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.049, 82670 neurons 0.052, 315542 neurons 0.080[0m
+[92maveraged SNAC 0.070[0m
+[92mNeuron Coverage percentage 82670 neurons 0.990, 82670 neurons 0.990, 315542 neurons 0.904[0m
+[92maveraged Neuron Coverage 0.934[0m
+
+Iteration 101
+[92minput already causes different outputs: [0.2872731], [-0.01020366], [-0.05468414][0m
+[92mSNAC percentage 82670 neurons 0.049, 82670 neurons 0.052, 315542 neurons 0.080[0m
+[92maveraged SNAC 0.070[0m
+[92mNeuron Coverage percentage 82670 neurons 0.990, 82670 neurons 0.990, 315542 neurons 0.904[0m
+[92maveraged Neuron Coverage 0.934[0m
+
+Iteration 102
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.050, 82670 neurons 0.052, 315542 neurons 0.081[0m
+[92maveraged SNAC 0.071[0m
+[92mNeuron Coverage percentage 82670 neurons 0.990, 82670 neurons 0.990, 315542 neurons 0.904[0m
+[92maveraged Neuron Coverage 0.934[0m
+
+Iteration 103
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.050, 82670 neurons 0.052, 315542 neurons 0.082[0m
+[92maveraged SNAC 0.071[0m
+[92mNeuron Coverage percentage 82670 neurons 0.990, 82670 neurons 0.990, 315542 neurons 0.904[0m
+[92maveraged Neuron Coverage 0.934[0m
+
+Iteration 104
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.050, 82670 neurons 0.053, 315542 neurons 0.082[0m
+[92maveraged SNAC 0.072[0m
+[92mNeuron Coverage percentage 82670 neurons 0.990, 82670 neurons 0.990, 315542 neurons 0.904[0m
+[92maveraged Neuron Coverage 0.934[0m
+
+Iteration 105
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.051, 82670 neurons 0.053, 315542 neurons 0.083[0m
+[92maveraged SNAC 0.072[0m
+[92mNeuron Coverage percentage 82670 neurons 0.990, 82670 neurons 0.990, 315542 neurons 0.905[0m
+[92maveraged Neuron Coverage 0.934[0m
+
+Iteration 106
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.052, 82670 neurons 0.053, 315542 neurons 0.084[0m
+[92maveraged SNAC 0.073[0m
+[92mNeuron Coverage percentage 82670 neurons 0.990, 82670 neurons 0.990, 315542 neurons 0.905[0m
+[92maveraged Neuron Coverage 0.934[0m
+
+Iteration 107
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.052, 82670 neurons 0.054, 315542 neurons 0.084[0m
+[92maveraged SNAC 0.074[0m
+[92mNeuron Coverage percentage 82670 neurons 0.990, 82670 neurons 0.990, 315542 neurons 0.905[0m
+[92maveraged Neuron Coverage 0.934[0m
+
+Iteration 108
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.053, 82670 neurons 0.055, 315542 neurons 0.085[0m
+[92maveraged SNAC 0.074[0m
+[92mNeuron Coverage percentage 82670 neurons 0.990, 82670 neurons 0.990, 315542 neurons 0.905[0m
+[92maveraged Neuron Coverage 0.934[0m
+
+Iteration 109
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.053, 82670 neurons 0.055, 315542 neurons 0.085[0m
+[92maveraged SNAC 0.075[0m
+[92mNeuron Coverage percentage 82670 neurons 0.990, 82670 neurons 0.990, 315542 neurons 0.905[0m
+[92maveraged Neuron Coverage 0.934[0m
+
+Iteration 110
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.053, 82670 neurons 0.055, 315542 neurons 0.086[0m
+[92maveraged SNAC 0.075[0m
+[92mNeuron Coverage percentage 82670 neurons 0.990, 82670 neurons 0.990, 315542 neurons 0.905[0m
+[92maveraged Neuron Coverage 0.934[0m
+
+Iteration 111
+[92minput already causes different outputs: [0.35559043], [-0.01020366], [0.07986875][0m
+[92mSNAC percentage 82670 neurons 0.054, 82670 neurons 0.056, 315542 neurons 0.086[0m
+[92maveraged SNAC 0.075[0m
+[92mNeuron Coverage percentage 82670 neurons 0.990, 82670 neurons 0.990, 315542 neurons 0.905[0m
+[92maveraged Neuron Coverage 0.935[0m
+
+Iteration 112
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.054, 82670 neurons 0.056, 315542 neurons 0.086[0m
+[92maveraged SNAC 0.076[0m
+[92mNeuron Coverage percentage 82670 neurons 0.990, 82670 neurons 0.990, 315542 neurons 0.906[0m
+[92maveraged Neuron Coverage 0.935[0m
+
+Iteration 113
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.054, 82670 neurons 0.057, 315542 neurons 0.087[0m
+[92maveraged SNAC 0.076[0m
+[92mNeuron Coverage percentage 82670 neurons 0.990, 82670 neurons 0.990, 315542 neurons 0.906[0m
+[92maveraged Neuron Coverage 0.935[0m
+
+Iteration 114
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.055, 82670 neurons 0.058, 315542 neurons 0.088[0m
+[92maveraged SNAC 0.077[0m
+[92mNeuron Coverage percentage 82670 neurons 0.991, 82670 neurons 0.990, 315542 neurons 0.906[0m
+[92maveraged Neuron Coverage 0.935[0m
+
+Iteration 115
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.055, 82670 neurons 0.058, 315542 neurons 0.089[0m
+[92maveraged SNAC 0.077[0m
+[92mNeuron Coverage percentage 82670 neurons 0.991, 82670 neurons 0.990, 315542 neurons 0.906[0m
+[92maveraged Neuron Coverage 0.935[0m
+
+Iteration 116
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.055, 82670 neurons 0.059, 315542 neurons 0.089[0m
+[92maveraged SNAC 0.078[0m
+[92mNeuron Coverage percentage 82670 neurons 0.991, 82670 neurons 0.990, 315542 neurons 0.906[0m
+[92maveraged Neuron Coverage 0.935[0m
+
+Iteration 117
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.056, 82670 neurons 0.059, 315542 neurons 0.090[0m
+[92maveraged SNAC 0.079[0m
+[92mNeuron Coverage percentage 82670 neurons 0.991, 82670 neurons 0.991, 315542 neurons 0.906[0m
+[92maveraged Neuron Coverage 0.935[0m
+
+Iteration 118
+[92minput already causes different outputs: [0.6494977], [-0.01020366], [0.12062223][0m
+[92mSNAC percentage 82670 neurons 0.056, 82670 neurons 0.059, 315542 neurons 0.090[0m
+[92maveraged SNAC 0.079[0m
+[92mNeuron Coverage percentage 82670 neurons 0.991, 82670 neurons 0.991, 315542 neurons 0.906[0m
+[92maveraged Neuron Coverage 0.935[0m
+
+Iteration 119
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.056, 82670 neurons 0.059, 315542 neurons 0.090[0m
+[92maveraged SNAC 0.079[0m
+[92mNeuron Coverage percentage 82670 neurons 0.991, 82670 neurons 0.991, 315542 neurons 0.906[0m
+[92maveraged Neuron Coverage 0.935[0m
+
+Iteration 120
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.056, 82670 neurons 0.059, 315542 neurons 0.091[0m
+[92maveraged SNAC 0.079[0m
+[92mNeuron Coverage percentage 82670 neurons 0.991, 82670 neurons 0.991, 315542 neurons 0.906[0m
+[92maveraged Neuron Coverage 0.935[0m
+
+Iteration 121
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.057, 82670 neurons 0.060, 315542 neurons 0.091[0m
+[92maveraged SNAC 0.080[0m
+[92mNeuron Coverage percentage 82670 neurons 0.991, 82670 neurons 0.991, 315542 neurons 0.907[0m
+[92maveraged Neuron Coverage 0.936[0m
+
+Iteration 122
+[92minput already causes different outputs: [0.25051615], [-0.01020366], [0.00705585][0m
+[92mSNAC percentage 82670 neurons 0.057, 82670 neurons 0.060, 315542 neurons 0.091[0m
+[92maveraged SNAC 0.080[0m
+[92mNeuron Coverage percentage 82670 neurons 0.991, 82670 neurons 0.991, 315542 neurons 0.907[0m
+[92maveraged Neuron Coverage 0.936[0m
+
+Iteration 123
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.058, 82670 neurons 0.061, 315542 neurons 0.092[0m
+[92maveraged SNAC 0.081[0m
+[92mNeuron Coverage percentage 82670 neurons 0.991, 82670 neurons 0.991, 315542 neurons 0.907[0m
+[92maveraged Neuron Coverage 0.936[0m
+
+Iteration 124
+[92minput already causes different outputs: [0.22196417], [-0.01020366], [0.07491461][0m
+[92mSNAC percentage 82670 neurons 0.059, 82670 neurons 0.061, 315542 neurons 0.092[0m
+[92maveraged SNAC 0.081[0m
+[92mNeuron Coverage percentage 82670 neurons 0.991, 82670 neurons 0.991, 315542 neurons 0.907[0m
+[92maveraged Neuron Coverage 0.936[0m
+
+Iteration 125
+[92minput already causes different outputs: [0.21200016], [-0.01020366], [0.36318803][0m
+[92mSNAC percentage 82670 neurons 0.059, 82670 neurons 0.061, 315542 neurons 0.093[0m
+[92maveraged SNAC 0.081[0m
+[92mNeuron Coverage percentage 82670 neurons 0.991, 82670 neurons 0.991, 315542 neurons 0.907[0m
+[92maveraged Neuron Coverage 0.936[0m
+
+Iteration 126
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.059, 82670 neurons 0.062, 315542 neurons 0.094[0m
+[92maveraged SNAC 0.082[0m
+[92mNeuron Coverage percentage 82670 neurons 0.991, 82670 neurons 0.991, 315542 neurons 0.907[0m
+[92maveraged Neuron Coverage 0.936[0m
+
+Iteration 127
+[92minput already causes different outputs: [0.18002558], [-0.01020366], [-0.11041212][0m
+[92mSNAC percentage 82670 neurons 0.060, 82670 neurons 0.063, 315542 neurons 0.094[0m
+[92maveraged SNAC 0.083[0m
+[92mNeuron Coverage percentage 82670 neurons 0.992, 82670 neurons 0.991, 315542 neurons 0.907[0m
+[92maveraged Neuron Coverage 0.936[0m
+
+Iteration 128
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.060, 82670 neurons 0.063, 315542 neurons 0.095[0m
+[92maveraged SNAC 0.083[0m
+[92mNeuron Coverage percentage 82670 neurons 0.992, 82670 neurons 0.991, 315542 neurons 0.907[0m
+[92maveraged Neuron Coverage 0.936[0m
+
+Iteration 129
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.061, 82670 neurons 0.064, 315542 neurons 0.096[0m
+[92maveraged SNAC 0.084[0m
+[92mNeuron Coverage percentage 82670 neurons 0.992, 82670 neurons 0.991, 315542 neurons 0.907[0m
+[92maveraged Neuron Coverage 0.936[0m
+
+Iteration 130
+[92minput already causes different outputs: [0.21559066], [-0.01020366], [0.04260454][0m
+[92mSNAC percentage 82670 neurons 0.061, 82670 neurons 0.064, 315542 neurons 0.096[0m
+[92maveraged SNAC 0.085[0m
+[92mNeuron Coverage percentage 82670 neurons 0.992, 82670 neurons 0.991, 315542 neurons 0.908[0m
+[92maveraged Neuron Coverage 0.936[0m
+
+Iteration 131
+[92minput already causes different outputs: [0.00988025], [-0.01020366], [-0.6372775][0m
+[92mSNAC percentage 82670 neurons 0.064, 82670 neurons 0.067, 315542 neurons 0.097[0m
+[92maveraged SNAC 0.086[0m
+[92mNeuron Coverage percentage 82670 neurons 0.992, 82670 neurons 0.991, 315542 neurons 0.908[0m
+[92maveraged Neuron Coverage 0.936[0m
+
+Iteration 132
+[92minput already causes different outputs: [0.25785705], [-0.01020366], [0.02863383][0m
+[92mSNAC percentage 82670 neurons 0.064, 82670 neurons 0.067, 315542 neurons 0.097[0m
+[92maveraged SNAC 0.086[0m
+[92mNeuron Coverage percentage 82670 neurons 0.992, 82670 neurons 0.991, 315542 neurons 0.908[0m
+[92maveraged Neuron Coverage 0.937[0m
+
+Iteration 133
+[92minput already causes different outputs: [0.47111985], [-0.01020366], [0.23317893][0m
+[92mSNAC percentage 82670 neurons 0.064, 82670 neurons 0.068, 315542 neurons 0.097[0m
+[92maveraged SNAC 0.086[0m
+[92mNeuron Coverage percentage 82670 neurons 0.992, 82670 neurons 0.991, 315542 neurons 0.908[0m
+[92maveraged Neuron Coverage 0.937[0m
+
+Iteration 134
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.065, 82670 neurons 0.068, 315542 neurons 0.099[0m
+[92maveraged SNAC 0.088[0m
+[92mNeuron Coverage percentage 82670 neurons 0.992, 82670 neurons 0.991, 315542 neurons 0.908[0m
+[92maveraged Neuron Coverage 0.937[0m
+
+Iteration 135
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.065, 82670 neurons 0.070, 315542 neurons 0.100[0m
+[92maveraged SNAC 0.089[0m
+[92mNeuron Coverage percentage 82670 neurons 0.992, 82670 neurons 0.991, 315542 neurons 0.909[0m
+[92maveraged Neuron Coverage 0.937[0m
+
+Iteration 136
+[92minput already causes different outputs: [0.11868506], [-0.01020366], [0.31353456][0m
+[92mSNAC percentage 82670 neurons 0.067, 82670 neurons 0.070, 315542 neurons 0.101[0m
+[92maveraged SNAC 0.090[0m
+[92mNeuron Coverage percentage 82670 neurons 0.992, 82670 neurons 0.991, 315542 neurons 0.909[0m
+[92maveraged Neuron Coverage 0.937[0m
+
+Iteration 137
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.067, 82670 neurons 0.070, 315542 neurons 0.101[0m
+[92maveraged SNAC 0.090[0m
+[92mNeuron Coverage percentage 82670 neurons 0.992, 82670 neurons 0.991, 315542 neurons 0.909[0m
+[92maveraged Neuron Coverage 0.937[0m
+
+Iteration 138
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.067, 82670 neurons 0.071, 315542 neurons 0.102[0m
+[92maveraged SNAC 0.090[0m
+[92mNeuron Coverage percentage 82670 neurons 0.992, 82670 neurons 0.991, 315542 neurons 0.909[0m
+[92maveraged Neuron Coverage 0.937[0m
+
+Iteration 139
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.068, 82670 neurons 0.072, 315542 neurons 0.103[0m
+[92maveraged SNAC 0.091[0m
+[92mNeuron Coverage percentage 82670 neurons 0.992, 82670 neurons 0.991, 315542 neurons 0.909[0m
+[92maveraged Neuron Coverage 0.937[0m
+
+Iteration 140
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.068, 82670 neurons 0.072, 315542 neurons 0.103[0m
+[92maveraged SNAC 0.092[0m
+[92mNeuron Coverage percentage 82670 neurons 0.992, 82670 neurons 0.991, 315542 neurons 0.909[0m
+[92maveraged Neuron Coverage 0.937[0m
+
+Iteration 141
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.068, 82670 neurons 0.072, 315542 neurons 0.103[0m
+[92maveraged SNAC 0.092[0m
+[92mNeuron Coverage percentage 82670 neurons 0.992, 82670 neurons 0.991, 315542 neurons 0.909[0m
+[92maveraged Neuron Coverage 0.938[0m
+
+Iteration 142
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.069, 82670 neurons 0.072, 315542 neurons 0.104[0m
+[92maveraged SNAC 0.092[0m
+[92mNeuron Coverage percentage 82670 neurons 0.992, 82670 neurons 0.991, 315542 neurons 0.909[0m
+[92maveraged Neuron Coverage 0.938[0m
+
+Iteration 143
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.069, 82670 neurons 0.073, 315542 neurons 0.104[0m
+[92maveraged SNAC 0.093[0m
+[92mNeuron Coverage percentage 82670 neurons 0.992, 82670 neurons 0.991, 315542 neurons 0.909[0m
+[92maveraged Neuron Coverage 0.938[0m
+
+Iteration 144
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.070, 82670 neurons 0.074, 315542 neurons 0.105[0m
+[92maveraged SNAC 0.094[0m
+[92mNeuron Coverage percentage 82670 neurons 0.992, 82670 neurons 0.991, 315542 neurons 0.909[0m
+[92maveraged Neuron Coverage 0.938[0m
+
+Iteration 145
+[92minput already causes different outputs: [0.21996418], [-0.01020366], [-0.02344133][0m
+[92mSNAC percentage 82670 neurons 0.070, 82670 neurons 0.074, 315542 neurons 0.106[0m
+[92maveraged SNAC 0.094[0m
+[92mNeuron Coverage percentage 82670 neurons 0.993, 82670 neurons 0.991, 315542 neurons 0.909[0m
+[92maveraged Neuron Coverage 0.938[0m
+
+Iteration 146
+[92minput already causes different outputs: [0.5455673], [-0.01020366], [0.15847279][0m
+[92mSNAC percentage 82670 neurons 0.070, 82670 neurons 0.074, 315542 neurons 0.106[0m
+[92maveraged SNAC 0.094[0m
+[92mNeuron Coverage percentage 82670 neurons 0.993, 82670 neurons 0.991, 315542 neurons 0.909[0m
+[92maveraged Neuron Coverage 0.938[0m
+
+Iteration 147
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.070, 82670 neurons 0.074, 315542 neurons 0.106[0m
+[92maveraged SNAC 0.094[0m
+[92mNeuron Coverage percentage 82670 neurons 0.993, 82670 neurons 0.992, 315542 neurons 0.910[0m
+[92maveraged Neuron Coverage 0.938[0m
+
+Iteration 148
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.071, 82670 neurons 0.075, 315542 neurons 0.107[0m
+[92maveraged SNAC 0.095[0m
+[92mNeuron Coverage percentage 82670 neurons 0.993, 82670 neurons 0.992, 315542 neurons 0.910[0m
+[92maveraged Neuron Coverage 0.938[0m
+
+Iteration 149
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.071, 82670 neurons 0.075, 315542 neurons 0.107[0m
+[92maveraged SNAC 0.095[0m
+[92mNeuron Coverage percentage 82670 neurons 0.993, 82670 neurons 0.992, 315542 neurons 0.910[0m
+[92maveraged Neuron Coverage 0.938[0m
+
+Iteration 150
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.071, 82670 neurons 0.075, 315542 neurons 0.107[0m
+[92maveraged SNAC 0.095[0m
+[92mNeuron Coverage percentage 82670 neurons 0.993, 82670 neurons 0.992, 315542 neurons 0.910[0m
+[92maveraged Neuron Coverage 0.938[0m
+
+Iteration 151
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.071, 82670 neurons 0.075, 315542 neurons 0.107[0m
+[92maveraged SNAC 0.096[0m
+[92mNeuron Coverage percentage 82670 neurons 0.993, 82670 neurons 0.992, 315542 neurons 0.910[0m
+[92maveraged Neuron Coverage 0.938[0m
+
+Iteration 152
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.073, 82670 neurons 0.077, 315542 neurons 0.109[0m
+[92maveraged SNAC 0.097[0m
+[92mNeuron Coverage percentage 82670 neurons 0.993, 82670 neurons 0.992, 315542 neurons 0.910[0m
+[92maveraged Neuron Coverage 0.938[0m
+
+Iteration 153
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.074, 82670 neurons 0.078, 315542 neurons 0.111[0m
+[92maveraged SNAC 0.099[0m
+[92mNeuron Coverage percentage 82670 neurons 0.993, 82670 neurons 0.992, 315542 neurons 0.910[0m
+[92maveraged Neuron Coverage 0.939[0m
+
+Iteration 154
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.075, 82670 neurons 0.079, 315542 neurons 0.112[0m
+[92maveraged SNAC 0.100[0m
+[92mNeuron Coverage percentage 82670 neurons 0.993, 82670 neurons 0.992, 315542 neurons 0.910[0m
+[92maveraged Neuron Coverage 0.939[0m
+
+Iteration 155
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.075, 82670 neurons 0.079, 315542 neurons 0.112[0m
+[92maveraged SNAC 0.100[0m
+[92mNeuron Coverage percentage 82670 neurons 0.993, 82670 neurons 0.992, 315542 neurons 0.910[0m
+[92maveraged Neuron Coverage 0.939[0m
+
+Iteration 156
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.075, 82670 neurons 0.080, 315542 neurons 0.113[0m
+[92maveraged SNAC 0.101[0m
+[92mNeuron Coverage percentage 82670 neurons 0.993, 82670 neurons 0.992, 315542 neurons 0.911[0m
+[92maveraged Neuron Coverage 0.939[0m
+
+Iteration 157
+[92minput already causes different outputs: [0.1880983], [-0.01020366], [-0.02860338][0m
+[92mSNAC percentage 82670 neurons 0.075, 82670 neurons 0.080, 315542 neurons 0.113[0m
+[92maveraged SNAC 0.101[0m
+[92mNeuron Coverage percentage 82670 neurons 0.993, 82670 neurons 0.992, 315542 neurons 0.911[0m
+[92maveraged Neuron Coverage 0.939[0m
+
+Iteration 158
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.076, 82670 neurons 0.080, 315542 neurons 0.113[0m
+[92maveraged SNAC 0.101[0m
+[92mNeuron Coverage percentage 82670 neurons 0.993, 82670 neurons 0.992, 315542 neurons 0.911[0m
+[92maveraged Neuron Coverage 0.939[0m
+
+Iteration 159
+[92minput already causes different outputs: [0.27400103], [-0.01020366], [-0.03529391][0m
+[92mSNAC percentage 82670 neurons 0.076, 82670 neurons 0.080, 315542 neurons 0.113[0m
+[92maveraged SNAC 0.101[0m
+[92mNeuron Coverage percentage 82670 neurons 0.993, 82670 neurons 0.992, 315542 neurons 0.911[0m
+[92maveraged Neuron Coverage 0.939[0m
+
+Iteration 160
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.076, 82670 neurons 0.080, 315542 neurons 0.113[0m
+[92maveraged SNAC 0.101[0m
+[92mNeuron Coverage percentage 82670 neurons 0.993, 82670 neurons 0.992, 315542 neurons 0.911[0m
+[92maveraged Neuron Coverage 0.939[0m
+
+Iteration 161
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.076, 82670 neurons 0.082, 315542 neurons 0.114[0m
+[92maveraged SNAC 0.102[0m
+[92mNeuron Coverage percentage 82670 neurons 0.993, 82670 neurons 0.992, 315542 neurons 0.911[0m
+[92maveraged Neuron Coverage 0.939[0m
+
+Iteration 162
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.076, 82670 neurons 0.082, 315542 neurons 0.114[0m
+[92maveraged SNAC 0.102[0m
+[92mNeuron Coverage percentage 82670 neurons 0.993, 82670 neurons 0.992, 315542 neurons 0.911[0m
+[92maveraged Neuron Coverage 0.939[0m
+
+Iteration 163
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.077, 82670 neurons 0.082, 315542 neurons 0.115[0m
+[92maveraged SNAC 0.102[0m
+[92mNeuron Coverage percentage 82670 neurons 0.993, 82670 neurons 0.992, 315542 neurons 0.911[0m
+[92maveraged Neuron Coverage 0.939[0m
+
+Iteration 164
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.077, 82670 neurons 0.083, 315542 neurons 0.115[0m
+[92maveraged SNAC 0.103[0m
+[92mNeuron Coverage percentage 82670 neurons 0.993, 82670 neurons 0.992, 315542 neurons 0.911[0m
+[92maveraged Neuron Coverage 0.939[0m
+
+Iteration 165
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.077, 82670 neurons 0.083, 315542 neurons 0.115[0m
+[92maveraged SNAC 0.103[0m
+[92mNeuron Coverage percentage 82670 neurons 0.993, 82670 neurons 0.992, 315542 neurons 0.911[0m
+[92maveraged Neuron Coverage 0.939[0m
+
+Iteration 166
+[92minput already causes different outputs: [0.23850942], [-0.01020366], [0.03296747][0m
+[92mSNAC percentage 82670 neurons 0.078, 82670 neurons 0.083, 315542 neurons 0.115[0m
+[92maveraged SNAC 0.103[0m
+[92mNeuron Coverage percentage 82670 neurons 0.993, 82670 neurons 0.992, 315542 neurons 0.911[0m
+[92maveraged Neuron Coverage 0.939[0m
+
+Iteration 167
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.078, 82670 neurons 0.084, 315542 neurons 0.115[0m
+[92maveraged SNAC 0.103[0m
+[92mNeuron Coverage percentage 82670 neurons 0.993, 82670 neurons 0.992, 315542 neurons 0.911[0m
+[92maveraged Neuron Coverage 0.939[0m
+
+Iteration 168
+Found new output which causes difference in models' predictions.
+[92mSNAC percentage 82670 neurons 0.078, 82670 neurons 0.084, 315542 neurons 0.116[0m
+[92maveraged SNAC 0.104[0m
+[92mNeuron Coverage percentage 82670 neurons 0.993, 82670 neurons 0.992, 315542 neurons 0.911[0m
+[92maveraged Neuron Cover
