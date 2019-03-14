@@ -21,7 +21,9 @@ At this point, you can enter any of the model directories which DeepXplore++ sup
 The coverage metrics which are currently supported are Neuron Coverage (from DeepXplore) and Strong Neuron Activation Coverage (from DeepGauge). The parameter `nc` specifies the coverage target as Neuron Coverage, and `snac` specifies the coverage target as Strong Neuron Activation Coverage.
 
 PDF - `python gen_diff.py 2 0.1 0.1 2000 20 0 nc`
+
 MNIST - `python gen_diff.py light 1 0.1 10 20 20 0 snac`
+
 Driving - `python gen_diff.py light 1 0.1 10 20 20 0 nc`
 
 # Experimental Data
