@@ -32,3 +32,5 @@ Driving - `python gen_diff.py light 1 0.1 10 20 20 0 nc`
 
 Experimental data for our project can be found in the `official_report_results` directory. Files are named according to the model, the number of seed inputs, the target coverage criteria, and any input modification that is specified.  
 
+Results for the comparison of DeepXplore's neuron coverage vs. corrected neuron coverage can be found in the `original` branch under the same directory.
+
