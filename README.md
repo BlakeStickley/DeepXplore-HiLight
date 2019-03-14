@@ -1,76 +1,30 @@
-# DeepXplore: Systematic DNN testing  (SOSP'17)
+# DeepXplore++, An extension of DeepXplore
 See the SOSP'17 paper [DeepXplore: Automated Whitebox Testing of Deep Learning Systems](http://www.cs.columbia.edu/~suman/docs/deepxplore.pdf) for more details.
-## Prerequisite
-### Python
-The code should be run using python 2.7.12, Tensorflow 1.3.0, Keras 2.0.8, PIL, h5py, and opencv-python
 
-jteoh edit: If using conda, you can run the following to create an environment that installs everything but Mimicus (described below)
-```bash
-conda create -c conda-forge -n deepxplore python=2.7.12 tensorflow=1.3.0 keras=2.0.8 PIL h5py opencv
-```
+# Building DeepXplore++
+We've provided a Dockerfile which you can use to build and run DeepXplore++. The steps for running are the following:
 
-### Tensorflow
-```bash
-sudo pip install tensorflow
-```
-if you have gpu,
-```bash
-pip install tensorflow-gpu
-```
+1. Install [Docker](https://www.docker.com/)
+2. Clone this repository to your machine
+3. cd to the repository main directory
+4. Run `docker build .` which will start building the image
+5. Run `docker run -it [IMAGE ID]` where image ID is the hash of the image
 
-### Keras
-```bash
-pip install keras
-```
-To set Keras backend to be tensorflow (two options):
-```bash
-1. Modify ~/.keras/keras.json by setting "backend": "tensorflow"
-2. KERAS_BACKEND=tensorflow python gen_diff.py
-```
+For instructions on setting up the project locally, please see the original implementation. 
 
-### PIL
-```bash
-pip install Pillow
-```
+# Running DeepXplore++
 
-### h5py
-```bash
-pip install h5py
-```
+At this point, you can enter any of the model directories which DeepXplore++ supports, (PDF, MNIST, Driving) and you can run the `gen_diff.py` file to generate adversarial examples and track coverage. 
 
-### opencv-python
-```bash
-pip install opencv-python
-```
+`gen_diff.py` takes as input model specific arguments such as the type of input modification, lambda parameters, the number of gradient ascent iterations, and a coverage criteria that is being targetted. Examples for the supported models are shown below. See the `gen_diff.py` file for the specific model if you have any more questions.
 
-### Mimicus
-Install from [here](https://github.com/srndic/mimicus).
+The coverage metrics which are currently supported are Neuron Coverage (from DeepXplore) and Strong Neuron Activation Coverage (from DeepGauge). The parameter `nc` specifies the coverage target as Neuron Coverage, and `snac` specifies the coverage target as Strong Neuron Activation Coverage.
 
-## File structure
-+ **MNIST** - MNIST dataset.
-+ **ImageNet** - ImageNet dataset.
-+ **Driving** - Udacity self-driving car dataset.
-+ **PDF** - Benign/malicious PDFs captured from VirusTotal/Contagio/Google provided by Mimicus.
-+ **Drebin** - Drebin Android malware dataset.
+PDF - `python gen_diff.py 2 0.1 0.1 2000 20 0 nc`
+MNIST - `python gen_diff.py light 1 0.1 10 20 20 0 snac`
+Driving - `python gen_diff.py light 1 0.1 10 20 20 0 nc`
 
-# To run
-In every directory
-```bash
-python gen_diff.py
-```
+# Experimental Data
 
-# Note
-The trained weights are provided in each directory (if required).
-Drebin's weights are not part of this repo as they are too large to be hosted on GitHub. Download from [here](https://drive.google.com/drive/folders/0B4otJeEcboCaQzFpYkJwb2h3WG8?usp=sharing) and put them in ./Drebin/.
+Experimental data for our project can be found in the `official_report_results` directory. Files are named according to the model, the number of seed inputs, the target coverage criteria, and any input modification that is specified.  
 
-Note that as DeepXplore use randomness for its exploration, you should fix the seed of the random number generator if you want deterministic and reproducable results. An example is shown below.   
-```python
-import numpy as np
-import random
-
-random.seed(1)
-np.random.seed(1)
-```
-
-# Coming soon
-How to test your own DNN models.
