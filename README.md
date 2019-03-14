@@ -1,6 +1,8 @@
 # DeepXplore++, An extension of DeepXplore
 See the SOSP'17 paper [DeepXplore: Automated Whitebox Testing of Deep Learning Systems](http://www.cs.columbia.edu/~suman/docs/deepxplore.pdf) for more details.
 
+DeepXplore++ fixes discrepancies in the implementation of Neuron Coverage between the description in the paper and in the implementation found on github. In addition, DeepXplore is extended to include SNAC (Strong Neuron Activation Coverage) as a coverage criteria to be tracked as well as targetted.
+
 # Building DeepXplore++
 We've provided a Dockerfile which you can use to build and run DeepXplore++. The steps for running are the following:
 
