@@ -32,7 +32,7 @@ def constraint_light(gradients):
     return grad_mean * new_grads
 
 
-def constraint_black(gradients, rect_shape=(6, 6)):
+def constraint_black(gradients, rect_shape=(8, 8)):
     start_point = (
         random.randint(0, gradients.shape[1] - rect_shape[0]), random.randint(0, gradients.shape[2] - rect_shape[1]))
     new_grads = np.zeros_like(gradients)
@@ -40,6 +40,37 @@ def constraint_black(gradients, rect_shape=(6, 6)):
     if np.mean(patch) < 0:
         new_grads[:, start_point[0]:start_point[0] + rect_shape[0],
         start_point[1]:start_point[1] + rect_shape[1]] = -np.ones_like(patch)
+    return new_grads
+
+def constraint_black_mod(gradients, iters, rect_shape=(2, 2)):
+    if iters < 10:
+    	start_point = (random.randint(6, 18), random.randint(0, gradients.shape[2] - rect_shape[1]))
+    else:
+	start_point = (
+        	random.randint(0, gradients.shape[1] - rect_shape[0]), random.randint(0, gradients.shape[2] - rect_shape[1]))
+    new_grads = np.zeros_like(gradients)
+    patch = gradients[:, start_point[0]:start_point[0] + rect_shape[0], start_point[1]:start_point[1] + rect_shape[1]]
+    if np.mean(patch) < 0:
+        new_grads[:, start_point[0]:start_point[0] + rect_shape[0],
+        start_point[1]:start_point[1] + rect_shape[1]] = -np.ones_like(patch)
+    return new_grads
+
+def constraint_black_brightest(gradients, image, rect_shape=(8, 8)):
+    # calculate the start point to cover the brightest pixel in the image
+    brightestPixel = 0.00
+    brightestXY = [0,0]
+    max_x = len(image[0][0]) - rect_shape[0]
+    max_y = len(image[0]) - rect_shape[1]
+    for y in range(0, max_y):
+        for x in range (0, max_x):
+            if image[0][y][x][0] > brightestPixel:
+                brightestPixel = image[0][y][x][0]
+                brightestXY = [x, y]
+    start_point = brightestXY
+    new_grads = np.zeros_like(gradients)
+    patch = gradients[:, start_point[0]:start_point[0] + rect_shape[0], start_point[1]:start_point[1] + rect_shape[1]]
+    #if np.mean(patch) < 0:
+    new_grads[:, start_point[0]:start_point[0] + rect_shape[0],start_point[1]:start_point[1] + rect_shape[1]] = -np.ones_like(patch)
     return new_grads
 
 

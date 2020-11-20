@@ -33,7 +33,7 @@ parser.add_argument('threshold', help="threshold for determining neuron activate
 parser.add_argument('coverage', help='Coverage criteria targeted', choices=["nc", "snac"])
 parser.add_argument('-t', '--target_model', help="target model that we want it predicts differently",
                     choices=[0, 1, 2], default=0, type=int)
-parser.add_argument('-sp', '--start_point', help="occlusion upper left corner coordinate", default=(0, 0), type=tuple)
+parser.add_argument('-sp', '--start_point', help="occlusion upper left corner coordinate", default=(8, 8), type=tuple)
 parser.add_argument('-occl_size', '--occlusion_size', help="occlusion size", default=(10, 10), type=tuple)
 
 
@@ -76,6 +76,9 @@ m1_hl = pickle.load(open("m1-10000-samples.p", "rb"))
 m2_hl = pickle.load(open("m2-10000-samples.p", "rb"))
 m3_hl = pickle.load(open("m3-10000-samples.p", "rb"))
 
+# added coverage list
+coverageList = list()
+
 def outputCoverage(m1, m2, m3, c):
     print(bcolors.OKGREEN + '%s percentage %d neurons %.3f, %d neurons %.3f, %d neurons %.3f'
               % (c, len(m1), neuron_covered(m1)[2], len(m2),
@@ -87,6 +90,9 @@ def outputCoverage(m1, m2, m3, c):
             neuron_covered(m3)[
                 1])
     print(bcolors.OKGREEN + 'averaged %s %.3f' % (c, averaged_coverage) + bcolors.ENDC)
+    # added covList
+    if(c == 'Neuron Coverage'):
+        coverageList.append('%.3f' % (averaged_coverage*100))
 
 
 if args.coverage == "nc":
@@ -101,6 +107,7 @@ random.shuffle(x_test)
 x_test = x_test[:args.seeds]
 iter = 0
 differences = 0
+num_blackouts = 0
 
 for img in x_test:
     print("\nIteration " + str(iter+1))
@@ -114,9 +121,9 @@ for img in x_test:
 
     # measuring test-only coverage (ie don't include these only_test dictionaries when computing updated coverage
     # after applying gradients
-    update_coverage(gen_img, model1, m1_dict, m1_hl, True, args.threshold)
-    update_coverage(gen_img, model2, m2_dict, m2_hl, True, args.threshold)
-    update_coverage(gen_img, model3, m3_dict, m3_hl, True, args.threshold)
+    # update_coverage(gen_img, model1, m1_dict, m1_hl, True, args.threshold)
+    # update_coverage(gen_img, model2, m2_dict, m2_hl, True, args.threshold)
+    # update_coverage(gen_img, model3, m3_dict, m3_hl, True, args.threshold)
 
     if not label1 == label2 == label3:
         print(bcolors.OKGREEN + 'input already causes different outputs: {}, {}, {}'.format(label1, label2,
@@ -181,8 +188,9 @@ for img in x_test:
             grads_value = constraint_occl(grads_value, args.start_point,
                                           args.occlusion_size)  # constraint the gradients value
         elif args.transformation == 'blackout':
-            grads_value = constraint_black(grads_value)  # constraint the gradients value
-
+            num_blackouts += 1
+            grads_value = constraint_black_brightest(grads_value, gen_img)  # constraint the gradients value
+        
         gen_img += grads_value * args.step
         predictions1 = np.argmax(model1.predict(gen_img)[0])
         predictions2 = np.argmax(model2.predict(gen_img)[0])
@@ -215,6 +223,15 @@ print("Final coverage metric from test data with adversarial example generation:
 outputCoverage(m1_dict["snac"], m2_dict["snac"], m3_dict["snac"], "SNAC")
 outputCoverage(m1_dict["nc"], m2_dict["nc"], m3_dict["nc"], "Neuron Coverage")
 
-print("Final coverage metric solely from test data: ")
-outputCoverage(m1_dict["snac_test"], m2_dict["snac_test"], m3_dict["snac_test"], "SNAC")
-outputCoverage(m1_dict["nc_test"], m2_dict["nc_test"], m3_dict["nc_test"], "Neuron Coverage")
+# print("Final coverage metric solely from test data: ")
+# outputCoverage(m1_dict["snac_test"], m2_dict["snac_test"], m3_dict["snac_test"], "SNAC")
+# outputCoverage(m1_dict["nc_test"], m2_dict["nc_test"], m3_dict["nc_test"], "Neuron Coverage")
+
+# added
+print("Final coverage plot: [")
+print(*coverageList , sep = ", ")
+print(" ]")
+
+# print("grads_value: ")
+# print(gen_img)
+print("num blackouts: %d" % num_blackouts)

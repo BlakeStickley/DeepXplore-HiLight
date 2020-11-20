@@ -61,6 +61,15 @@ def constraint_black(gradients, rect_shape=(10, 10)):
         start_point[1]:start_point[1] + rect_shape[1]] = -np.ones_like(patch)
     return new_grads
 
+def constraint_black_mod(gradients, rect_shape=(30, 30)):
+    start_point = (
+        random.randint(0, gradients.shape[1] - rect_shape[0]), random.randint(0, gradients.shape[2] - rect_shape[1]))
+    new_grads = np.zeros_like(gradients)
+    patch = gradients[:, start_point[0]:start_point[0] + rect_shape[0], start_point[1]:start_point[1] + rect_shape[1]]
+    # automatically reassign to -1 value
+    new_grads[:, start_point[0]:start_point[0] + rect_shape[0], start_point[1]:start_point[1] + rect_shape[1]] = -np.ones_like(patch)
+    return new_grads
+
 
 def init_coverage_tables(model1, model2, model3):
     model_layer_dict1 = defaultdict(bool)
