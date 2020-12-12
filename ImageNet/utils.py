@@ -51,7 +51,7 @@ def constraint_light(gradients):
     return grad_mean * new_grads
 
 
-def constraint_black(gradients, rect_shape=(10, 10)):
+def constraint_black(gradients, rect_shape=(30, 30)):
     start_point = (
         random.randint(0, gradients.shape[1] - rect_shape[0]), random.randint(0, gradients.shape[2] - rect_shape[1]))
     new_grads = np.zeros_like(gradients)
@@ -68,6 +68,26 @@ def constraint_black_mod(gradients, rect_shape=(30, 30)):
     patch = gradients[:, start_point[0]:start_point[0] + rect_shape[0], start_point[1]:start_point[1] + rect_shape[1]]
     # automatically reassign to -1 value
     new_grads[:, start_point[0]:start_point[0] + rect_shape[0], start_point[1]:start_point[1] + rect_shape[1]] = -np.ones_like(patch)
+    return new_grads
+
+def constraint_black_hilight(gradients, image, rect_shape=(45, 45)):
+    # calculate the start point to cover the brightest pixel in the image
+    brightestPixel = 0.00
+    brightestXY = [0,0]
+    max_x = len(image[0][0]) - rect_shape[0]
+    max_y = len(image[0]) - rect_shape[1]
+    for y in range(0, max_y):
+        for x in range (0, max_x):
+            # Sum RGB values
+            image_sum = image[0][y][x][0] + image[0][y][x][1] + image[0][y][x][2]
+            if image_sum > brightestPixel:
+                brightestPixel = image_sum
+                brightestXY = [x, y]
+    start_point = brightestXY
+    new_grads = np.zeros_like(gradients)
+    patch = gradients[:, start_point[0]:start_point[0] + rect_shape[0], start_point[1]:start_point[1] + rect_shape[1]]
+    #if np.mean(patch) < 0:
+    new_grads[:, start_point[0]:start_point[0] + rect_shape[0],start_point[1]:start_point[1] + rect_shape[1]] = -np.ones_like(patch)
     return new_grads
 
 

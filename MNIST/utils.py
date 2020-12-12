@@ -32,7 +32,7 @@ def constraint_light(gradients):
     return grad_mean * new_grads
 
 
-def constraint_black(gradients, rect_shape=(8, 8)):
+def constraint_black(gradients, rect_shape=(6, 6)):
     start_point = (
         random.randint(0, gradients.shape[1] - rect_shape[0]), random.randint(0, gradients.shape[2] - rect_shape[1]))
     new_grads = np.zeros_like(gradients)
@@ -55,7 +55,7 @@ def constraint_black_mod(gradients, iters, rect_shape=(2, 2)):
         start_point[1]:start_point[1] + rect_shape[1]] = -np.ones_like(patch)
     return new_grads
 
-def constraint_black_brightest(gradients, image, rect_shape=(8, 8)):
+def constraint_black_hilight(gradients, image, rect_shape=(8, 8)):
     # calculate the start point to cover the brightest pixel in the image
     brightestPixel = 0.00
     brightestXY = [0,0]
@@ -73,6 +73,48 @@ def constraint_black_brightest(gradients, image, rect_shape=(8, 8)):
     new_grads[:, start_point[0]:start_point[0] + rect_shape[0],start_point[1]:start_point[1] + rect_shape[1]] = -np.ones_like(patch)
     return new_grads
 
+def constraint_black_darkest(gradients, image, rect_shape=(8, 8)):
+    # calculate the start point to cover the darkest pixel in the image
+    darkPixel = 100.00
+    darkXY = [0,0]
+    max_x = len(image[0][0]) - rect_shape[0]
+    max_y = len(image[0]) - rect_shape[1]
+    for y in range(0, max_y):
+        for x in range (0, max_x):
+            if image[0][y][x][0] < darkPixel:
+                darkPixel = image[0][y][x][0]
+                darkXY = [x, y]
+    start_point = darkXY
+    new_grads = np.zeros_like(gradients)
+    patch = gradients[:, start_point[0]:start_point[0] + rect_shape[0], start_point[1]:start_point[1] + rect_shape[1]]
+    #if np.mean(patch) < 0:
+    new_grads[:, start_point[0]:start_point[0] + rect_shape[0],start_point[1]:start_point[1] + rect_shape[1]] = -np.ones_like(patch)
+    return new_grads
+
+def constraint_black_mean(gradients, image, rect_shape=(8, 8)):
+    # calculate the start point to cover the pixel with the value closest to the average pixel value in the image
+    avgPixel = 0.00
+    avgXY = [0,0]
+    max_x = len(image[0][0]) - rect_shape[0]
+    max_y = len(image[0]) - rect_shape[1]
+    avg_value = 0.00
+    num_pixels = 0
+    for y in range(0, max_y):
+        for x in range (0, max_x):
+            avg_value += image[0][y][x][0]
+            num_pixels += 1
+    avg_value = avg_value / num_pixels
+    for y in range(0, max_y):
+        for x in range (0, max_x):
+            if abs(image[0][y][x][0] - avg_value) < abs(avgPixel - avg_value):
+                avgPixel = image[0][y][x][0]
+                avgXY = [x, y]
+    start_point = avgXY
+    new_grads = np.zeros_like(gradients)
+    patch = gradients[:, start_point[0]:start_point[0] + rect_shape[0], start_point[1]:start_point[1] + rect_shape[1]]
+    #if np.mean(patch) < 0:
+    new_grads[:, start_point[0]:start_point[0] + rect_shape[0],start_point[1]:start_point[1] + rect_shape[1]] = -np.ones_like(patch)
+    return new_grads
 
 def init_coverage_tables(model1, model2, model3):
     model_layer_dict1 = defaultdict(bool)

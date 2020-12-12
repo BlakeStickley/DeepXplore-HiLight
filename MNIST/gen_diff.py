@@ -5,6 +5,7 @@ usage: python gen_diff.py -h
 from __future__ import print_function
 
 import argparse
+import datetime
 
 from keras.datasets import mnist
 from keras.layers import Input
@@ -78,6 +79,7 @@ m3_hl = pickle.load(open("m3-10000-samples.p", "rb"))
 
 # added coverage list
 coverageList = list()
+goal_completed = False
 
 def outputCoverage(m1, m2, m3, c):
     print(bcolors.OKGREEN + '%s percentage %d neurons %.3f, %d neurons %.3f, %d neurons %.3f'
@@ -93,6 +95,12 @@ def outputCoverage(m1, m2, m3, c):
     # added covList
     if(c == 'Neuron Coverage'):
         coverageList.append('%.3f' % (averaged_coverage*100))
+    global goal_completed
+    if(averaged_coverage >= 0.90 and goal_completed == False):
+        goal_completed = True
+        goal_end = datetime.datetime.now()
+        global goal_diff
+        goal_diff = (goal_end - start_time)
 
 
 if args.coverage == "nc":
@@ -108,6 +116,10 @@ x_test = x_test[:args.seeds]
 iter = 0
 differences = 0
 num_blackouts = 0
+inner_total = 0
+
+# TIMING, START
+start_time = datetime.datetime.now()
 
 for img in x_test:
     print("\nIteration " + str(iter+1))
@@ -160,7 +172,7 @@ for img in x_test:
         loss2 = K.mean(model2.get_layer('before_softmax').output[..., orig_label])
         loss3 = -args.weight_diff * K.mean(model3.get_layer('before_softmax').output[..., orig_label])
 
-    # we run gradient ascent for 20 steps
+    # we run gradient ascent for a specified number of steps
     for iters in xrange(args.grad_iterations):
 
         layer_name1, index1 = neuron_to_cover(m1_dict[args.coverage])
@@ -188,8 +200,14 @@ for img in x_test:
             grads_value = constraint_occl(grads_value, args.start_point,
                                           args.occlusion_size)  # constraint the gradients value
         elif args.transformation == 'blackout':
+            inner_start_time = datetime.datetime.now()
             num_blackouts += 1
-            grads_value = constraint_black_brightest(grads_value, gen_img)  # constraint the gradients value
+            # Blackout Modification
+            # CHANGE THIS LINE TO USE OTHER SELETION APPROACHES
+            grads_value = constraint_black_hilight(grads_value, gen_img)  # constraint the gradients value
+            inner_end_time = datetime.datetime.now()
+            inner_diff = (inner_end_time - inner_start_time)
+            inner_total += inner_diff.total_seconds()
         
         gen_img += grads_value * args.step
         predictions1 = np.argmax(model1.predict(gen_img)[0])
@@ -217,17 +235,32 @@ for img in x_test:
                 predictions2) + '_' + str(predictions3) + '_orig.png',
                    orig_img_deprocessed)
             break
+        else:
+            update_coverage(gen_img, model1, m1_dict, m1_hl, args.threshold)
+            update_coverage(gen_img, model2, m2_dict, m2_hl, args.threshold)
+            update_coverage(gen_img, model3, m3_dict, m3_hl, args.threshold)
+
+            outputCoverage(m1_dict["nc"], m2_dict["nc"], m3_dict["nc"], "Neuron Coverage")
+
+# TIMING, END
+end_time = datetime.datetime.now()
+time_diff = (end_time - start_time)
+execution_time = time_diff.total_seconds() * 1000
+# goal_time = goal_diff.total_seconds() * 1000
 
 print("Total differences found: %i" % differences)
+print("Total execution time: ")
+print(execution_time)
+print("Inner execution time: ")
+print(inner_total * 1000)
+# print("Time to reach 90 percent NC: ")
+# print(goal_time)
+
+
 print("Final coverage metric from test data with adversarial example generation: ")
 outputCoverage(m1_dict["snac"], m2_dict["snac"], m3_dict["snac"], "SNAC")
 outputCoverage(m1_dict["nc"], m2_dict["nc"], m3_dict["nc"], "Neuron Coverage")
 
-# print("Final coverage metric solely from test data: ")
-# outputCoverage(m1_dict["snac_test"], m2_dict["snac_test"], m3_dict["snac_test"], "SNAC")
-# outputCoverage(m1_dict["nc_test"], m2_dict["nc_test"], m3_dict["nc_test"], "Neuron Coverage")
-
-# added
 print("Final coverage plot: [")
 print(*coverageList , sep = ", ")
 print(" ]")

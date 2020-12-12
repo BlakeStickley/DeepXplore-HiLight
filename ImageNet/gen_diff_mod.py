@@ -5,6 +5,7 @@ usage: python gen_diff.py -h
 from __future__ import print_function
 
 import argparse
+import datetime
 
 from keras.applications.resnet50 import ResNet50
 from keras.applications.vgg16 import VGG16
@@ -52,6 +53,17 @@ model_layer_dict1, model_layer_dict2, model_layer_dict3 = init_coverage_tables(m
 
 # ==============================================================================================
 # start gen inputs
+
+coverageList = list()
+goal_completed = False
+num_blackouts = 0
+differences = 0
+inner_total = 0
+averaged_nc = 0
+
+#TIMING START
+start_time = datetime.datetime.now()
+
 img_paths = image.list_pictures('./seeds', ext='JPEG')
 for _ in xrange(args.seeds):
     gen_img = preprocess_image(random.choice(img_paths))
@@ -121,7 +133,8 @@ for _ in xrange(args.seeds):
     # this function returns the loss and grads given the input picture
     iterate = K.function([input_tensor], [loss1, loss2, loss3, loss1_neuron, loss2_neuron, loss3_neuron, grads])
 
-    # we run gradient ascent for 20 steps
+    # we run gradient ascent for a specified number of steps
+    first_mod = True
     for iters in xrange(args.grad_iterations):
         loss_value1, loss_value2, loss_value3, loss_neuron1, loss_neuron2, loss_neuron3, grads_value = iterate(
             [gen_img])
@@ -131,7 +144,14 @@ for _ in xrange(args.seeds):
             grads_value = constraint_occl(grads_value, args.start_point,
                                           args.occlusion_size)  # constraint the gradients value
         elif args.transformation == 'blackout':
-            grads_value = constraint_black_mod(grads_value)  # constraint the gradients value
+	    inner_start_time = datetime.datetime.now()
+	    num_blackouts += 1
+	    # Blackout Modification
+	    # CHANGE THIS LINE TO USE OTHER SELECTION APPROACHES
+            grads_value = constraint_black_hilight(grads_value, gen_img)  # constraint the gradients value
+	    inner_end_time = datetime.datetime.now()
+	    inner_diff = (inner_end_time - inner_start_time)
+	    inner_total += inner_diff.total_seconds()
 
         gen_img += grads_value * args.step
         pred1, pred2, pred3 = model1.predict(gen_img), model2.predict(gen_img), model3.predict(gen_img)
@@ -153,6 +173,13 @@ for _ in xrange(args.seeds):
                     1])
             print(bcolors.OKGREEN + 'averaged covered neurons %.3f' % averaged_nc + bcolors.ENDC)
 
+            differences += 1
+	    coverageList.append('%.3f' % (averaged_nc*100))
+	    if(averaged_nc >= 0.95 and goal_completed == False):
+		goal_completed = True
+		goal_end = datetime.datetime.now()
+		goal_diff = (goal_end - start_time)
+
             gen_img_deprocessed = deprocess_image(gen_img)
             orig_img_deprocessed = deprocess_image(orig_img)
 
@@ -162,3 +189,29 @@ for _ in xrange(args.seeds):
             imsave(GEN_INPUTS_DIR + args.transformation + '_' + decode_label(pred1) + '_' + decode_label(
                 pred2) + '_' + decode_label(pred3) + '_orig.png', orig_img_deprocessed)
             break
+        else:
+            if(first_mod == True):
+                coverageList.append('%.3f' % (averaged_nc*100))
+                first_mod = False
+
+# TIMING END
+end_time = datetime.datetime.now()
+time_diff = (end_time - start_time)
+execution_time = time_diff.total_seconds() * 1000
+# goal_time = goal_diff.total_seconds() * 1000
+
+print("Total differences found: %i" % differences)
+print("Total execution time: ")
+print(execution_time)
+print("Inner execution time: ")
+print(inner_total * 1000)
+# print("Time to reach 95 percent NC: ")
+# print(goal_time)
+
+print("Final coverage plot: [")
+print(*coverageList , sep = ", ")
+print(" ]")
+
+print("num blackouts: %d" % num_blackouts)
+
+
